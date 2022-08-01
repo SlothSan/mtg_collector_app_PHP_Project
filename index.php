@@ -15,6 +15,10 @@
         <title>MTG Card Collector - PHP Project - iO Academy.</title>
     </head>
     <body>
+        <header class="header-container">
+            <h1>MTG Card Collector App</h1>
+            <p>Created by Mike O for the Full Stack Track Course at iO Academy.</p>
+        </header>
 
     </body>
 </html>
