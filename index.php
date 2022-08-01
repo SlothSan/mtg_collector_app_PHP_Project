@@ -19,6 +19,11 @@
             <h1>MTG Card Collector App</h1>
             <p>Created by Mike O for the Full Stack Track Course at iO Academy.</p>
         </header>
+        <section class="project-blurb-container">
+            <p>This is a project to showcase my PHP, CSS and SQL skills learnt at iO Academy.</p>
+            <p>There is a DB that holds Magic The Gathering Cards, you can query it with the search below, add new cards using the submit button,
+                or view all cards in the table below the submit button - Neat !</p>
+        </section>
 
     </body>
 </html>
