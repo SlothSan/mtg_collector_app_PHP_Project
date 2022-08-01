@@ -1,6 +1,6 @@
 <?php
-session_start()
-
+session_start();
+require_once('functions.php');
 ?>
 
 
@@ -34,11 +34,15 @@ session_start()
             <p>Use the search below to find a specific card</p>
             <form method="post">
                 <label>Enter Card Title</label>
-                <input type="text" name="title" placeholder="Enter a card title !">
+                <input type="text" name="cardTitle" placeholder="Enter a card title !">
                 <input type="submit" value="Find Card !">
             </form>
-            <div> //For Testing only remove when ready
-
+            <div> <!--For Testing only remove when ready-->
+                <?php
+                    if(isset($_POST['cardTitle'])) {
+                        print_r(checkSingleCardTitleInDb($_POST['cardTitle']));
+                    }
+                    ?>
             </div>
         </section>
         <section class="cardDisplay-container">
