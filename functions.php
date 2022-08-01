@@ -9,8 +9,7 @@ function checkSingleCardTitleInDb(string $cardTitle): array {
     $queryString = 'SELECT `title`, `color`, `cardType`, `raritySet` FROM `cards` WHERE ' . "`title` LIKE '%{$cardTitle}%'";
     $query = $db->prepare($queryString);
     $query->execute();
-    $result = $query->fetch();
-    return $result;
+    return $result = $query->fetch();
 }
 
 function createSingleDisplayCard(array $result) {
