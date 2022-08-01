@@ -6,7 +6,7 @@ function checkSingleCardTitleInDb(string $cardTitle): array {
     $dbPassword = 'password';
     $db = new PDO ($connectionString, $dbUsername, $dbPassword);
     $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-    $queryString = 'SELECT `title`, `color`, `raritySet` FROM `cards` WHERE ' . "`title` LIKE '%{$cardTitle}%'";
+    $queryString = 'SELECT `title`, `color`, `cardType`, `raritySet` FROM `cards` WHERE ' . "`title` LIKE '%{$cardTitle}%'";
     $query = $db->prepare($queryString);
     $query->execute();
     $result = $query->fetch();
@@ -16,6 +16,7 @@ function checkSingleCardTitleInDb(string $cardTitle): array {
 function createSingleDisplayCard(array $result) {
     echo "<div>";
         echo "<p>Card Title: " . $result['title'] . "</p>";
+        echo "<p>Card Type: " . $result['cardType'] . "</p>";
         if($result['color'] === 'green') {
             echo "<p>Card Color: Green</p>";
         } else if ($result['color'] === 'black') {
@@ -37,37 +38,41 @@ function createSingleDisplayCard(array $result) {
         } else if ($result['raritySet'] === "mythicRare") {
             echo "<p>Rarity: Mythic Rare</p>";
         }
+
+        echo "<form method='post'>";
+        echo "<button type='submit' value='". $result['title'] . "' name='createCard'>Create Card!!!</button>";
+        echo "</form>";
     echo"</div>";
 }
 
-function createAllDisplayCards(array $result) {
-    foreach ($result as $res) {
+function createAllDisplayCards(array $results) {
+    foreach ($results as $card) {
         echo "<div>";
-            echo "<p>Card Title: ". $res['title'] . "</p>";
-
-            if($res['color'] === 'green') {
+            echo "<p>Card Title: ". $card['title'] . "</p>";
+            echo "<p>Card Type: " . $card['cardType'] . "</p>";
+            if($card['color'] === 'green') {
                 echo "<p>Card Color: Green</p>";
-            } else if ($res['color'] === 'black') {
+            } else if ($card['color'] === 'black') {
                 echo "<p>Card Color: Black</p>";
-            } else if ($res['color'] === 'red') {
+            } else if ($card['color'] === 'red') {
                 echo "<p>Card Color: Red</p>";
-            } else if ($res['color'] === 'blue') {
+            } else if ($card['color'] === 'blue') {
                 echo "<p>Card Color: Blue</p>";
-            } else if ($res['color'] === 'white') {
+            } else if ($card['color'] === 'white') {
                 echo "<p>Card Color: White</p>";
             }
 
-            if ($res['raritySet'] === 'common') {
+            if ($card['raritySet'] === 'common') {
                 echo "<p>Rarity: Common</p>";
-            } else if ($res['raritySet'] === 'uncommon') {
+            } else if ($card['raritySet'] === 'uncommon') {
                 echo "<p>Rarity: Uncommon</p>";
-            } else if ($res['raritySet'] === 'rare') {
+            } else if ($card['raritySet'] === 'rare') {
                 echo "<p>Rarity: Rare</p>";
-            } else if ($res['raritySet'] === "mythicRare") {
+            } else if ($card['raritySet'] === "mythicRare") {
                 echo "<p>Rarity: Mythic Rare</p>";
             }
             echo "<form method='post'>";
-                echo "<button type='submit' value='". $res['title'] . "' name='createCard'>Create Card!!!</button>";
+                echo "<button type='submit' value='". $card['title'] . "' name='createCard'>Create Card!!!</button>";
             echo "</form>";
         echo "</div>";
     }
