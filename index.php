@@ -40,7 +40,7 @@ require_once('functions.php');
             <div> <!--For Testing only remove when ready-->
                 <?php
                     if(isset($_POST['cardTitle'])) {
-                        print_r(checkSingleCardTitleInDb($_POST['cardTitle']));
+                        createSingleDisplayCard(checkSingleCardTitleInDb($_POST['cardTitle']));
                     }
                     ?>
             </div>
