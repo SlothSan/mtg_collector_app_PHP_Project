@@ -40,6 +40,39 @@ function createSingleDisplayCard(array $result) {
     echo"</div>";
 }
 
+function createAllDisplayCards(array $result) {
+    foreach ($result as $res) {
+        echo "<div>";
+            echo "<p>Card Title: ". $res['title'] . "</p>";
+
+            if($res['color'] === 'green') {
+                echo "<p>Card Color: Green</p>";
+            } else if ($res['color'] === 'black') {
+                echo "<p>Card Color: Black</p>";
+            } else if ($res['color'] === 'red') {
+                echo "<p>Card Color: Red</p>";
+            } else if ($res['color'] === 'blue') {
+                echo "<p>Card Color: Blue</p>";
+            } else if ($res['color'] === 'white') {
+                echo "<p>Card Color: White</p>";
+            }
+
+            if ($res['raritySet'] === 'common') {
+                echo "<p>Rarity: Common</p>";
+            } else if ($res['raritySet'] === 'uncommon') {
+                echo "<p>Rarity: Uncommon</p>";
+            } else if ($res['raritySet'] === 'rare') {
+                echo "<p>Rarity: Rare</p>";
+            } else if ($res['raritySet'] === "mythicRare") {
+                echo "<p>Rarity: Mythic Rare</p>";
+            }
+            echo "<form method='post'>";
+                echo "<button type='submit' value='". $res['title'] . "' name='createCard'>Create Card!!!</button>";
+            echo "</form>";
+        echo "</div>";
+    }
+}
+
 function checkAllCards(): array {
     $connectionString = 'mysql:host=db; dbname=mtg_cards';
     $dbUsername = 'root';
@@ -49,7 +82,7 @@ function checkAllCards(): array {
     $queryString = 'SELECT * FROM `cards`';
     $query = $db->prepare($queryString);
     $query->execute();
-    $result = $query->fetch();
+    $result = $query->fetchAll();
     return $result;
 
 }

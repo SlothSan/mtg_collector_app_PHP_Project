@@ -46,7 +46,11 @@ require_once('functions.php');
             </div>
         </section>
         <section class="cardDisplay-container">
-
+            <?php createAllDisplayCards(checkAllCards());
+            if (isset($_POST['createCard'])) {
+                print_r($_POST);
+            }
+            ?>
         </section>
     </body>
 </html>
