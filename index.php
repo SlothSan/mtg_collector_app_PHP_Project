@@ -24,6 +24,15 @@
             <p>There is a DB that holds Magic The Gathering Cards, you can query it with the search below, add new cards using the submit button,
                 or view all cards in the table below the submit button - Neat !</p>
         </section>
+        <section class="addCard-container">
+            <p>Click below to be redirected to the page to create your own card!!!</p>
+            <form method="post">
+                <input type="button" value="Add a Card!">
+            </form>
+        </section>
+        <section class="">
+
+        </section>
 
     </body>
 </html>
