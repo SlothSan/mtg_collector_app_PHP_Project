@@ -35,8 +35,11 @@ session_start()
             <form method="post">
                 <label>Enter Card Title</label>
                 <input type="text" name="title" placeholder="Enter a card title !">
-                <input type="submit" value="Create Card !">
+                <input type="submit" value="Find Card !">
             </form>
+            <div> //For Testing only remove when ready
+
+            </div>
         </section>
         <section class="cardDisplay-container">
 
