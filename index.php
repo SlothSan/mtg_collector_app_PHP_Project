@@ -1,5 +1,5 @@
 <?php
-
+session_start()
 
 ?>
 
@@ -27,12 +27,19 @@
         <section class="addCard-container">
             <p>Click below to be redirected to the page to create your own card!!!</p>
             <form method="post">
-                <input type="button" value="Add a Card!">
+                <input type="button" value="Add a Card!" name="addCard">
             </form>
         </section>
-        <section class="">
+        <section class="cardSearch-container">
+            <p>Use the search below to find a specific card</p>
+            <form method="post">
+                <label>Enter Card Title</label>
+                <input type="text" name="title" placeholder="Enter a card title !">
+                <input type="submit" value="Create Card !">
+            </form>
+        </section>
+        <section class="cardDisplay-container">
 
         </section>
-
     </body>
 </html>
