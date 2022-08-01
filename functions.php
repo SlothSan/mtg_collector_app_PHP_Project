@@ -6,7 +6,7 @@ function checkSingleCardTitleInDb(string $cardTitle): array {
     $dbPassword = 'password';
     $db = new PDO ($connectionString, $dbUsername, $dbPassword);
     $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-    $queryString = 'SELECT * FROM `cards` WHERE ' . "`title` LIKE '%{$cardTitle}%'";
+    $queryString = 'SELECT `title` AS `Card Title`, `color` AS `Card Color`, `raritySet` AS `Card Rarity` FROM `cards` WHERE ' . "`title` LIKE '%{$cardTitle}%'";
     $query = $db->prepare($queryString);
     $query->execute();
     $result = $query->fetch();
