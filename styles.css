@@ -52,7 +52,55 @@
 
 body {
     font-size: 16px;
-    font-family: 'Beleren Small Caps';
+    font-family: 'Beleren Small Caps', 'Arial';
+}
+
+header {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    border-bottom: white 1px solid;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-title {
+    margin: 0 auto;
+    font-size: 2.5rem;
+}
+
+.header-intro-text {
+    margin: 0 auto;
+    font-style: italic;
+}
+
+.project-blurb-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 100%;
+    background-color: black;
+    border-bottom: white 1px solid;
+}
+
+.project-blurb-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-blurb-text {
+    margin-top: 5px;
+    color: white
 }
 
 /*MTG Card Generator Styling*/

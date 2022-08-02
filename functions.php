@@ -24,41 +24,9 @@ function checkSingleCardAndGetAllInfo(string $cardTitle) {
     return $result = $query->fetch();
 }
 
-function createSingleDisplayCard(array $result) {
-    echo "<div>";
-        echo "<p>Card Title: " . $result['title'] . "</p>";
-        echo "<p>Card Type: " . $result['cardType'] . "</p>";
-        if($result['color'] === 'green') {
-            echo "<p>Card Color: Green</p>";
-        } else if ($result['color'] === 'black') {
-            echo "<p>Card Color: Black</p>";
-        } else if ($result['color'] === 'red') {
-            echo "<p>Card Color: Red</p>";
-        } else if ($result['color'] === 'blue') {
-            echo "<p>Card Color: Blue</p>";
-        } else if ($result['color'] === 'white') {
-            echo "<p>Card Color: White</p>";
-        }
-
-        if ($result['raritySet'] === 'common') {
-            echo "<p>Rarity: Common</p>";
-        } else if ($result['raritySet'] === 'uncommon') {
-            echo "<p>Rarity: Uncommon</p>";
-        } else if ($result['raritySet'] === 'rare') {
-            echo "<p>Rarity: Rare</p>";
-        } else if ($result['raritySet'] === "mythicRare") {
-            echo "<p>Rarity: Mythic Rare</p>";
-        }
-
-        echo "<form method='post'>";
-        echo "<button type='submit' value='". $result['title'] . "' name='createCard'>Create Card!!!</button>";
-        echo "</form>";
-    echo"</div>";
-}
-
 function createAllDisplayCards(array $results) {
     foreach ($results as $card) {
-        echo "<div>";
+        echo "<div class='display-card'>";
             echo "<p>Card Title: ". $card['title'] . "</p>";
             echo "<p>Card Type: " . $card['cardType'] . "</p>";
             if($card['color'] === 'green') {
@@ -83,7 +51,7 @@ function createAllDisplayCards(array $results) {
                 echo "<p>Rarity: Mythic Rare</p>";
             }
             echo "<form method='post'>";
-                echo "<button type='submit' value='". $card['title'] . "' name='createCard'>Create Card!!!</button>";
+                echo "<button type='submit' value='". $card['title'] . "' name='createCard'>View Card</button>";
             echo "</form>";
         echo "</div>";
     }
