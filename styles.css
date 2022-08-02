@@ -108,6 +108,45 @@ header {
     margin-bottom: 10px;
 }
 
+.mtg-card-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mtg-card-header {
+    height: 175px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.mtg-card-header-title {
+    font-size: 2.5rem;
+}
+
+.mtg-card-header-text {
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+.return-button {
+    background-color: grey;
+    color: white;
+    width: 300px;
+    height: 25px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
 /*MTG Card Generator Styling*/
 
 .card-back-green {
@@ -118,6 +157,7 @@ header {
     background-color: black;
     height: 698px;
     width: 500px;
+    margin-bottom: 10px;
 }
 
 .card-back-blue {
@@ -128,6 +168,7 @@ header {
     background-color: black;
     height: 698px;
     width: 500px;
+    margin-bottom: 10px;
 }
 
 .card-back-red {
@@ -138,6 +179,7 @@ header {
     background-color: black;
     height: 698px;
     width: 500px;
+    margin-bottom: 10px;
 }
 
 .card-back-black {
@@ -148,6 +190,7 @@ header {
     background-color: black;
     height: 698px;
     width: 500px;
+    margin-bottom: 10px;
 }
 
 .card-back-white {
@@ -158,6 +201,7 @@ header {
     background-color: black;
     height: 698px;
     width: 500px;
+    margin-bottom: 10px;
 }
 
 .card-top-container {
