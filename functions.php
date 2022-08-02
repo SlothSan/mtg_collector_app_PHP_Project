@@ -110,6 +110,11 @@ function createMTGCard(array $result) {
     $cardArt = $result['cardArt'];
     $cardType = $result['cardType'];
     $setType = $result['raritySet'];
+    $description = $result['description'];
+    $flavorDesignerText = $result['designerFlavourText'];
+    $power = $result['power'];
+    $toughness = $result['toughness'];
+
     echo "<div class='card-back-$color'>";
     echo "<div class='card-top-container'>";
     echo "<div class='card-title-container'>";
@@ -195,12 +200,17 @@ function createMTGCard(array $result) {
         echo "</span>";
         echo "<div class='description-contents-container'>";
         if ($result['description'] != null) {
-            echo "<p>" . $result['description'] . "</p>";
+            echo "<p>$description</p>";
         }
         if($result['designerFlavourText'] != null) {
-            echo "<p class='designer-text'>" . $result['designerFlavourText'] . "</p>";
+            echo "<p class='designer-text'>$flavorDesignerText</p>";
         }
         echo "</div>";
     echo "</div>"; // End of description container.
+        echo "<div class='powerandtough-container'>";
+        if($result['power'] or $result['toughness'] != null) {
+            echo "<p class='powerandtough'>$power/$toughness</p>";
+        }
+    echo "</div>"; // end of power and tough
     echo "</div>";
 }
