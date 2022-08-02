@@ -103,6 +103,29 @@ header {
     color: white
 }
 
+.cardDisplay-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.display-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+    width: 325px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    border: grey solid 1px;
+}
+
 /*MTG Card Generator Styling*/
 
 .card-back-green {

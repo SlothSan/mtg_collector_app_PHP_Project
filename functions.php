@@ -1,17 +1,5 @@
 <?php
 
-function checkSingleCardTitleInDb(string $cardTitle): array {
-    $connectionString = 'mysql:host=db; dbname=mtg_cards';
-    $dbUsername = 'root';
-    $dbPassword = 'password';
-    $db = new PDO ($connectionString, $dbUsername, $dbPassword);
-    $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-    $queryString = 'SELECT `title`, `color`, `cardType`, `raritySet` FROM `cards` WHERE ' . "`title` LIKE '%{$cardTitle}%'";
-    $query = $db->prepare($queryString);
-    $query->execute();
-    return $result = $query->fetch();
-}
-
 function checkSingleCardAndGetAllInfo(string $cardTitle) {
     $connectionString = 'mysql:host=db; dbname=mtg_cards';
     $dbUsername = 'root';
@@ -51,7 +39,7 @@ function createAllDisplayCards(array $results) {
                 echo "<p>Rarity: Mythic Rare</p>";
             }
             echo "<form method='post'>";
-                echo "<button type='submit' value='". $card['title'] . "' name='createCard'>View Card</button>";
+                echo "<button class='view-card-button' type='submit' value='". $card['title'] . "' name='createCard'>View Card</button>";
             echo "</form>";
         echo "</div>";
     }
