@@ -104,5 +104,7 @@ function checkAllCards(): array {
 }
 
 function createMTGCard(array $result) {
-    echo 'Hi Mom !';
+    $color = $result['color'];
+    echo "<div class='card-back-$color'>";
+    echo "</div>";
 }
