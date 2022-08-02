@@ -124,8 +124,10 @@ function createMTGCard(array $result) {
     echo "<div class='mana-cost-display-container'>";
 
         if($genericManaCost != null) {
-            echo "<img class='mana-neutral' src='./imgs/manaCosts/mana_circle.png' alt='neutral mana'>";
-            echo "<p class='mana-neutral-cost'>$genericManaCost</p>";
+            echo "<div class='mana-neutral-container'>";
+                echo "<img class='mana-neutral' src='./imgs/manaCosts/mana_circle.png' alt='neutral mana'>";
+                echo "<p class='mana-neutral-cost'>$genericManaCost</p>";
+            echo "</div>";
         }
         if ($result['greenCost'] != null) {
             $counterGreen = $result['greenCost'];

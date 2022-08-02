@@ -138,6 +138,10 @@ body {
     gap: 5px;
 }
 
+.mana-neutral-container {
+    position: relative;
+}
+
 .mana-cost-display-container {
     position: relative;
     height: 25px;
@@ -152,15 +156,14 @@ body {
 
 .mana-neutral {
     height: 25px;
-    position: relative;
 }
 
 .mana-neutral-cost {
-    position: relative;
+    position: absolute;
     font-weight: bold;
     font-size: 1.3rem;
     top: 1px;
-    right: 17px;
+    right: 7px;
     z-index: 10;
 }
 
