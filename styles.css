@@ -34,7 +34,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: black;
+    background-color: grey;
     color: white;
     border-bottom: white 1px solid;
 }
@@ -63,7 +63,7 @@ header {
     align-items: center;
     height: 150px;
     width: 100%;
-    background-color: black;
+    background-color: grey;
     border-bottom: white 1px solid;
 }
 
@@ -86,6 +86,10 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: url("./imgs/backgrounds/background2.jpeg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 .display-card {
@@ -95,15 +99,15 @@ header {
     align-items: center;
     gap: 5px;
     margin-top: 10px;
-    width: 325px;
-    background-color: black;
+    width: 400px;
+    background-color: grey;
     color: white;
     border-radius: 10px;
-    border: grey solid 1px;
+    border: black solid 1px;
 }
 
 .view-card-button {
-    background-color: grey;
+    background-color: black;
     color: white;
     width: 100px;
     height: 25px;
@@ -126,7 +130,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background-color: gray;
     color: white;
     border-radius: 10px;
     margin-bottom: 10px;
@@ -213,7 +217,7 @@ header {
     justify-content: left;
     align-items: center;
     width: 100%;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     margin-top: 9%;
     margin-left: 10%;
 }

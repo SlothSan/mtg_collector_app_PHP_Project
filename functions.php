@@ -71,7 +71,6 @@ function createMTGCard(array $result) {
     $flavorDesignerText = $result['designerFlavourText'];
     $power = $result['power'];
     $toughness = $result['toughness'];
-
     echo "<div class='card-back-$color'>";
     echo "<div class='card-top-container'>";
     echo "<div class='card-title-container'>";

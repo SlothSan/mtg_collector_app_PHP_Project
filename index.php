@@ -28,7 +28,7 @@ if(isset($_POST['createCard'])) {
         <section class="project-blurb-section">
             <div class="project-blurb-container">
                 <p class="project-blurb-text">This is a project to showcase my PHP, CSS and SQL skills learnt at iO Academy.</p>
-                <p class="project-blurb-text">There is a DB that holds Magic The Gathering Cards, You can see them all listed below, click View Card to have the card generated - neat !</p>
+                <p class="project-blurb-text">There is a DB that holds Magic The Gathering Cards, You can see them all listed below, click View Card to have the card generated.</p>
             </div>
         </section>
         <section class="cardDisplay-container">
