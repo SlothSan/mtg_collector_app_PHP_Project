@@ -19,10 +19,10 @@ if(isset($_POST['return'])) {
         <h1>MTG Card Generator</h1>
         <p>Takes the info from the DB and generates a card using PHP & CSS - Neat !</p>
         <?php createMTGCard(checkSingleCardAndGetAllInfo($_SESSION['createCard'])); ?>
+        <form method="post">
+            <button type='submit' value='return' name='return'>Go Back To Homepage</button>
+        </form>
     </div>
-    <form method="post">
-        <button type='submit' value='return' name='return'>Go Back To Homepage</button>
-    </form>
 </body>
 </html>
 
