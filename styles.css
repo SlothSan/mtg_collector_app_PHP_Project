@@ -177,3 +177,20 @@ body {
     width: 407px;
     height: 308px;
 }
+
+.card-type-container {
+    margin-top: 2.3%;
+    margin-left: 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.card-type-title-container {
+    width: 80%;
+    margin-top: -5px;
+}
+
+.card-type-text {
+    font-size: 1.1rem;
+}

@@ -108,6 +108,8 @@ function createMTGCard(array $result) {
     $cardTitle = $result['title'];
     $genericManaCost = $result['genericCost'];
     $cardArt = $result['cardArt'];
+    $cardType = $result['cardType'];
+    $setType = $result['raritySet'];
     echo "<div class='card-back-$color'>";
     echo "<div class='card-top-container'>";
     echo "<div class='card-title-container'>";
@@ -153,9 +155,18 @@ function createMTGCard(array $result) {
     echo "</div>"; // Close mana-cost
     echo "</div>"; // Close Mana Container
     echo "</div>"; // Close Card Top Div
-    //next container goes here.
     echo "<div class='card-art-container''>";
         echo "<img class='card-art' src='./imgs/cardArt/$cardArt' alt='$cardTitle' >";
-    echo "</div>";
+    echo "</div>"; //End of card art container
+    echo "<div class='card-type-container'>";
+        echo "<div class='card-type-title-container'>";
+            echo "<p class='card-type-text'>$cardType</p>";
+        echo "</div>";
+        echo "<div class='card-type-setLogo-container'>";
+            echo "<img class='card-set-logo-image' src='./imgs/M15_setIcons/m15_setIcon_$setType.jpeg' alt='M15 $setType' >";
+        echo "</div>";
+    echo "</div>"; // End of card type container
+    echo "<div class='description-container'>";
+    echo "</div>"; // End of description container. 
     echo "</div>";
 }
