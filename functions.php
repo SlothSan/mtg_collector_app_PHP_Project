@@ -193,6 +193,14 @@ function createMTGCard(array $result) {
             echo  ", ";
         }
         echo "</span>";
+        echo "<div class='description-contents-container'>";
+        if ($result['description'] != null) {
+            echo "<p>" . $result['description'] . "</p>";
+        }
+        if($result['designerFlavourText'] != null) {
+            echo "<p class='designer-text'>" . $result['designerFlavourText'] . "</p>";
+        }
+        echo "</div>";
     echo "</div>"; // End of description container.
     echo "</div>";
 }
