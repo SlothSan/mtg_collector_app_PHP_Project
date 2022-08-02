@@ -1,0 +1,56 @@
+/*Setup MTG Fonts*/
+
+@font-face {
+    font-family: 'Beleren Small Caps';
+    src: url('./fonts/Beleren-Bold.woff2') format('woff2'),
+         url('./fonts/Beleren-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Beleren';
+    src: url('./fonts/Beleren-Bold.woff2') format('woff2'),
+         url('./fonts/Beleren-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Matrix';
+    src: url('./fonts/Matrix-Bold.woff2') format('woff2'),
+         url('./fonts/Matrix-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Relay';
+    src: url('./fonts/Relay-Medium.woff2') format('woff2'),
+         url('./fonts/Relay-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Matrix';
+    src: url('./fonts/Matrix-Bold.woff2') format('woff2'),
+         url('./fonts/Matrix-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Beleren Small Caps';
+}
