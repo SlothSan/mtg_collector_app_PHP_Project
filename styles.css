@@ -54,3 +54,202 @@ body {
     font-size: 16px;
     font-family: 'Beleren Small Caps';
 }
+
+/*MTG Card Generator Styling*/
+
+.card-back-green {
+    display: flex;
+    flex-direction: column;
+    position: static;
+    background-image: url("./imgs/cardBacks/greenCardBack.png");
+    background-color: black;
+    height: 698px;
+    width: 500px;
+}
+
+.card-back-blue {
+    display: flex;
+    flex-direction: column;
+    position: static;
+    background-image: url("./imgs/cardBacks/blueCardBack.png");
+    background-color: black;
+    height: 698px;
+    width: 500px;
+}
+
+.card-back-red {
+    display: flex;
+    flex-direction: column;
+    position: static;
+    background-image: url("./imgs/cardBacks/redCardBack.png");
+    background-color: black;
+    height: 698px;
+    width: 500px;
+}
+
+.card-back-black {
+    display: flex;
+    flex-direction: column;
+    position: static;
+    background-image: url("./imgs/cardBacks/blackCardBack.png");
+    background-color: black;
+    height: 698px;
+    width: 500px;
+}
+
+.card-back-white {
+    display: flex;
+    flex-direction: column;
+    position: static;
+    background-image: url("./imgs/cardBacks/whiteCardBack.png");
+    background-color: black;
+    height: 698px;
+    width: 500px;
+}
+
+.card-top-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    font-size: 1.3rem;
+    margin-top: 9%;
+    margin-left: 10%;
+}
+
+.card-title-container {
+    width: 60%;
+}
+
+.card-title {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+.mana-cost-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+    margin-right: 19%;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.mana-neutral-container {
+    position: relative;
+}
+
+.mana-cost-display-container {
+    position: relative;
+    height: 25px;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.mana-cost-color {
+    height: 25px;
+}
+
+.mana-neutral {
+    height: 25px;
+}
+
+.mana-neutral-cost {
+    position: absolute;
+    font-weight: bold;
+    font-size: 1.3rem;
+    top: 1px;
+    right: 7px;
+    z-index: 10;
+}
+
+.card-art-container {
+    position: static;
+    width: 407px;
+    height: 308px;
+    margin-left: 9.3%;
+    z-index: 5;
+    margin-top: 1.8%;
+}
+
+.card-art {
+    width: 407px;
+    height: 308px;
+}
+
+.card-type-container {
+    margin-top: 2.3%;
+    margin-left: 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.card-type-title-container {
+    width: 80%;
+}
+
+.card-type-text {
+    font-size: 1.1rem;
+}
+
+.card-set-logo-image {
+    height: 25px;
+}
+
+.description-container {
+    width: 405px;
+    height: 185px;
+    margin-left: 10%;
+    margin-top: 20px;
+}
+
+.ability-cost-container {
+    float: left;
+    display: flex;
+    height: 19px
+}
+
+.description {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ability-cost {
+    height: 20px;
+    margin-right: 2px;
+}
+
+.description-contents-container {
+    font-size: 1.1rem;
+}
+
+.designer-text {
+    margin-top: 5px;
+    font-style: italic;
+}
+
+.powerandtough-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 14.5%;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.ability-neutral {
+    position: relative;
+    margin-right: 2px;
+}
+
+.ability-neutral-cost {
+    position: absolute;
+    font-weight: bold;
+    margin-left: 4px;
+    font-size: 1.1rem;
+    z-index: 10;
+}
