@@ -106,3 +106,60 @@ body {
     height: 698px;
     width: 500px;
 }
+
+.card-top-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    font-size: 1.3rem;
+    margin-top: 9%;
+    margin-left: 10%;
+}
+
+.card-title-container {
+    width: 60%;
+}
+
+.card-title {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+.mana-cost-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+    margin-right: 19%;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.mana-cost {
+    position: relative;
+    height: 25px;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.mana-cost-color {
+    height: 25px;
+}
+
+.mana-neutral {
+    height: 25px;
+    position: relative;
+}
+
+.mana-neutral-cost {
+    position: relative;
+    font-weight: bold;
+    font-size: 1.3rem;
+    top: 1px;
+    right: 17px;
+    z-index: 10;
+}

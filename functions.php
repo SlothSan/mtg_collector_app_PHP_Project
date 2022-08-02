@@ -105,6 +105,52 @@ function checkAllCards(): array {
 
 function createMTGCard(array $result) {
     $color = $result['color'];
+    $cardTitle = $result['title'];
+    $genericManaCost = $result['genericCost'];
     echo "<div class='card-back-$color'>";
+    echo "<div class='card-top-container'>";
+    echo "<div class='card-title-container'>";
+    echo "<p>$cardTitle</p>";
+    echo "</div>";
+    echo "<div class='mana-cost-container'>";
+    echo "<div class='mana-cost'>";
+
+        if($genericManaCost != null) {
+            echo "<img class='mana-neutral' src='./imgs/manaCosts/mana_circle.png' alt='neutral mana'>";
+            echo "<p class='mana-neutral-cost'>$genericManaCost</p>";
+        }
+        if ($result['greenCost'] != null) {
+            $counterGreen = $result['greenCost'];
+            for ($counterGreen; $counterGreen > 0; $counterGreen--) {
+                echo '<img class="mana-cost-color" src="./imgs/manaCosts/mana_g.png" alt="green mana">';
+            }
+        }
+        if ($result['blackCost'] != null) {
+            $counterBlack = $result['blackCost'];
+            for ($counterBlack; $counterBlack > 0; $counterBlack--) {
+                echo '<img class="mana-cost-color" src="./imgs/manaCosts/mana_b.png" alt="black mana">';
+            }
+        }
+        if ($result['blueCost'] != null) {
+            $counterBlue = $result['blueCost'];
+            for ($counterBlue; $counterBlue > 0; $counterBlue--) {
+                echo '<img class="mana-cost-color" src="./imgs/manaCosts/mana_u.png" alt="blue mana">';
+            }
+        }
+        if ($result['redCost'] != null) {
+            $counterRed = $result['redCost'];
+            for ($counterRed; $counterRed > 0; $counterRed--) {
+                echo '<img class="mana-cost-color" src="./imgs/manaCosts/mana_r.png" alt="red mana">';
+            }
+        }
+        if ($result['whiteCost'] != null) {
+            $counterWhite = $result['whiteCost'];
+            for ($counterWhite; $counterWhite > 0; $counterWhite--) {
+                echo '<img class="mana-cost-color" src="./imgs/manaCosts/mana_w.png" alt="white mana">';
+            }
+        }
+    echo "</div>"; // Close mana-cost
+    echo "</div>"; // Close Mana Container
+    echo "</div>"; // Close Card Top Div
     echo "</div>";
 }
