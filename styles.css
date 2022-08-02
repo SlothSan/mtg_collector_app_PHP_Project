@@ -236,8 +236,7 @@ body {
 .powerandtough-container {
     display: flex;
     justify-content: flex-end;
-    margin-right: 13.5%;
-    margin-bottom: 8.5%;
+    margin-right: 14.5%;
     font-size: 1.3rem;
     font-weight: bold;
 }
