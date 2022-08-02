@@ -28,33 +28,8 @@ if(isset($_POST['createCard'])) {
             <p>There is a DB that holds Magic The Gathering Cards, you can query it with the search below, add new cards using the submit button,
                 or view all cards in the table below the submit button - Neat !</p>
         </section>
-        <section class="addCard-container">
-            <p>Click below to be redirected to the page to create your own card!!!</p>
-            <form method="post">
-                <input type="button" value="Add a Card!" name="addCard">
-            </form>
-        </section>
-        <section class="cardSearch-container">
-            <p>Use the search below to find a specific card</p>
-            <form method="post">
-                <label>Enter Card Title</label>
-                <input type="text" name="cardTitle" placeholder="Enter a card title !">
-                <input type="submit" value="Find Card !">
-            </form>
-            <div> <!--For Testing only remove when ready-->
-                <?php
-                    if(isset($_POST['cardTitle'])) {
-                        createSingleDisplayCard(checkSingleCardTitleInDb($_POST['cardTitle']));
-                    }
-                    ?>
-            </div>
-        </section>
         <section class="cardDisplay-container">
-            <?php createAllDisplayCards(checkAllCards());
-            if (isset($_POST['createCard'])) {
-                print_r($_POST);
-            }
-            ?>
+            <?php createAllDisplayCards(checkAllCards()); ?>
         </section>
     </body>
 </html>

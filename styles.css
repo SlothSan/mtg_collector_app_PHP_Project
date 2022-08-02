@@ -191,7 +191,6 @@ body {
 
 .card-type-title-container {
     width: 80%;
-    margin-top: -5px;
 }
 
 .card-type-text {
@@ -200,7 +199,6 @@ body {
 
 .card-set-logo-image {
     height: 25px;
-    margin-top: -2px;
 }
 
 .description-container {
