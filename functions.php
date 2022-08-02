@@ -167,6 +167,32 @@ function createMTGCard(array $result) {
         echo "</div>";
     echo "</div>"; // End of card type container
     echo "<div class='description-container'>";
-    echo "</div>"; // End of description container. 
+        echo "<span class='ability-cost-container'>";
+        if($result['abilityCostGeneric'] != null) { //Logic goes here for ability costs / tap
+            echo "<img class='ability-cost ability-neutral' src='./imgs/manaCosts/mana_circle.png' alt='ability mana cost'>";
+            echo "<p class='ability-neutral-cost'>" . $result['abilityCostGeneric'] . "</p>";
+        }
+        if ($result['abilityCostGreen'] != null) {
+            echo "<img class='ability-cost' src='./imgs/manaCosts/mana_g.png' alt='green ability mana cost'>";
+        }
+        if ($result['abilityCostRed'] != null) {
+            echo "<img class='ability-cost' src='./imgs/manaCosts/mana_r.png' alt='red ability mana cost'>";
+        }
+        if ($result['abilityCostBlue'] != null) {
+            echo "<img class='ability-cost' src='./imgs/manaCosts/mana_u.png' alt='blue ability mana cost'>";
+        }
+        if ($result['abilityCostBlack'] != null) {
+            echo "<img class='ability-cost' src='./imgs/manaCosts/mana_b.png.' alt='black ability mana cost'>";
+        }
+        if ($result['abilityCostWhite'] != null) {
+            echo "<img class='ability-cost' src='./imgs/manaCosts/mana_w.png' alt='white ability mana cost'>";
+        }
+        if ($result['abilityTap']) {
+            echo ", ";
+            echo "<img class='ability-cost' src='./imgs/manaCosts/mana_t.png' alt='tap-icon'>";
+            echo  ", ";
+        }
+        echo "</span>";
+    echo "</div>"; // End of description container.
     echo "</div>";
 }

@@ -194,3 +194,62 @@ body {
 .card-type-text {
     font-size: 1.1rem;
 }
+
+.card-set-logo-image {
+    height: 25px;
+    margin-top: -2px;
+}
+
+.description-container {
+    width: 405px;
+    height: 185px;
+    margin-left: 10%;
+    margin-top: auto;
+}
+
+.ability-cost-container {
+    float: left;
+    display: flex;
+    height: 19px
+}
+
+.description {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ability-cost {
+    height: 20px;
+    margin-right: 2px;
+}
+
+.description-contents-container {
+    font-size: 1.1rem;
+}
+
+.designer-text {
+    margin-top: 5px;
+    font-style: italic;
+}
+
+.powerandtough-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 13.5%;
+    margin-bottom: 8.5%;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.ability-neutral {
+    position: relative;
+    margin-right: 2px;
+}
+
+.ability-neutral-cost {
+    position: absolute;
+    font-weight: bold;
+    margin-left: 4px;
+    font-size: 1.1rem;
+    z-index: 10;
+}
