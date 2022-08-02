@@ -16,13 +16,15 @@ if(isset($_POST['return'])) {
 </head>
 <body>
     <div class="mtg-card-container">
-        <h1>MTG Card Generator</h1>
-        <p>Takes the info from the DB and generates a card using PHP & CSS - Neat !</p>
+        <div class="mtg-card-header">
+            <h1 class="mtg-card-header-title">MTG Card Generator</h1>
+            <p class="mtg-card-header-text">Takes the info from the DB and generates a card using PHP & CSS - Neat !</p>
+        </div>
         <?php createMTGCard(checkSingleCardAndGetAllInfo($_SESSION['createCard'])); ?>
+        <form method="post">
+            <button class="return-button" type='submit' value='return' name='return'>Go Back To Homepage</button>
+        </form>
     </div>
-    <form method="post">
-        <button type='submit' value='return' name='return'>Go Back To Homepage</button>
-    </form>
 </body>
 </html>
 

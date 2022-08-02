@@ -18,33 +18,6 @@
     font-display: swap;
 }
 
-@font-face {
-    font-family: 'Matrix';
-    src: url('./fonts/Matrix-Bold.woff2') format('woff2'),
-         url('./fonts/Matrix-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Relay';
-    src: url('./fonts/Relay-Medium.woff2') format('woff2'),
-         url('./fonts/Relay-Medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Matrix';
-    src: url('./fonts/Matrix-Bold.woff2') format('woff2'),
-         url('./fonts/Matrix-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -52,7 +25,126 @@
 
 body {
     font-size: 16px;
-    font-family: 'Beleren Small Caps';
+    font-family: 'Beleren Small Caps', 'Arial';
+}
+
+header {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    border-bottom: white 1px solid;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-title {
+    margin: 0 auto;
+    font-size: 2.5rem;
+}
+
+.header-intro-text {
+    margin: 0 auto;
+    font-style: italic;
+}
+
+.project-blurb-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 100%;
+    background-color: black;
+    border-bottom: white 1px solid;
+}
+
+.project-blurb-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-blurb-text {
+    margin-top: 5px;
+    color: white;
+}
+
+.cardDisplay-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.display-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+    width: 325px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    border: grey solid 1px;
+}
+
+.view-card-button {
+    background-color: grey;
+    color: white;
+    width: 100px;
+    height: 25px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.mtg-card-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mtg-card-header {
+    height: 175px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.mtg-card-header-title {
+    font-size: 2.5rem;
+}
+
+.mtg-card-header-text {
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+.return-button {
+    background-color: grey;
+    color: white;
+    width: 300px;
+    height: 25px;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
 /*MTG Card Generator Styling*/
@@ -65,6 +157,7 @@ body {
     background-color: black;
     height: 698px;
     width: 500px;
+    margin-bottom: 10px;
 }
 
 .card-back-blue {
@@ -75,6 +168,7 @@ body {
     background-color: black;
     height: 698px;
     width: 500px;
+    margin-bottom: 10px;
 }
 
 .card-back-red {
@@ -85,6 +179,7 @@ body {
     background-color: black;
     height: 698px;
     width: 500px;
+    margin-bottom: 10px;
 }
 
 .card-back-black {
@@ -95,6 +190,7 @@ body {
     background-color: black;
     height: 698px;
     width: 500px;
+    margin-bottom: 10px;
 }
 
 .card-back-white {
@@ -105,6 +201,7 @@ body {
     background-color: black;
     height: 698px;
     width: 500px;
+    margin-bottom: 10px;
 }
 
 .card-top-container {

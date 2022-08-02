@@ -19,14 +19,17 @@ if(isset($_POST['createCard'])) {
         <title>MTG Card Collector - PHP Project - iO Academy.</title>
     </head>
     <body>
-        <header class="header-container">
-            <h1>MTG Card Collector App</h1>
-            <p>Created by Mike O for the Full Stack Track Course at iO Academy.</p>
+        <header>
+            <div class="header-container">
+                <h1 class="header-title">MTG Card Collector App</h1>
+                <p class="header-intro-text">Created by Mike O for the Full Stack Track Course at iO Academy.</p>
+            </div>
         </header>
-        <section class="project-blurb-container">
-            <p>This is a project to showcase my PHP, CSS and SQL skills learnt at iO Academy.</p>
-            <p>There is a DB that holds Magic The Gathering Cards, you can query it with the search below, add new cards using the submit button,
-                or view all cards in the table below the submit button - Neat !</p>
+        <section class="project-blurb-section">
+            <div class="project-blurb-container">
+                <p class="project-blurb-text">This is a project to showcase my PHP, CSS and SQL skills learnt at iO Academy.</p>
+                <p class="project-blurb-text">There is a DB that holds Magic The Gathering Cards, You can see them all listed below, click View Card to have the card generated - neat !</p>
+            </div>
         </section>
         <section class="cardDisplay-container">
             <?php createAllDisplayCards(checkAllCards()); ?>
