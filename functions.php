@@ -107,13 +107,14 @@ function createMTGCard(array $result) {
     $color = $result['color'];
     $cardTitle = $result['title'];
     $genericManaCost = $result['genericCost'];
+    $cardArt = $result['cardArt'];
     echo "<div class='card-back-$color'>";
     echo "<div class='card-top-container'>";
     echo "<div class='card-title-container'>";
     echo "<p>$cardTitle</p>";
     echo "</div>";
     echo "<div class='mana-cost-container'>";
-    echo "<div class='mana-cost'>";
+    echo "<div class='mana-cost-display-container'>";
 
         if($genericManaCost != null) {
             echo "<img class='mana-neutral' src='./imgs/manaCosts/mana_circle.png' alt='neutral mana'>";
@@ -152,5 +153,9 @@ function createMTGCard(array $result) {
     echo "</div>"; // Close mana-cost
     echo "</div>"; // Close Mana Container
     echo "</div>"; // Close Card Top Div
+    //next container goes here.
+    echo "<div class='card-art-container''>";
+        echo "<img class='card-art' src='./imgs/cardArt/$cardArt' alt='$cardTitle' >";
+    echo "</div>";
     echo "</div>";
 }
