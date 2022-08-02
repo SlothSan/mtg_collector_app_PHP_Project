@@ -1,6 +1,7 @@
 <?php
 
-function checkSingleCardAndGetAllInfo(string $cardTitle) {
+
+function checkSingleCardAndGetAllInfo(string $cardTitle): array {
     $connectionString = 'mysql:host=db; dbname=mtg_cards';
     $dbUsername = 'root';
     $dbPassword = 'password';
