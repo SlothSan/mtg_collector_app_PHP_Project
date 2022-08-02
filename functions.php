@@ -12,6 +12,18 @@ function checkSingleCardTitleInDb(string $cardTitle): array {
     return $result = $query->fetch();
 }
 
+function checkSingleCardAndGetAllInfo(string $cardTitle) {
+    $connectionString = 'mysql:host=db; dbname=mtg_cards';
+    $dbUsername = 'root';
+    $dbPassword = 'password';
+    $db = new PDO ($connectionString, $dbUsername, $dbPassword);
+    $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+    $queryString = "SELECT * FROM `cards` WHERE `title` LIKE '$cardTitle'";
+    $query = $db->prepare($queryString);
+    $query->execute();
+    return $result = $query->fetch();
+}
+
 function createSingleDisplayCard(array $result) {
     echo "<div>";
         echo "<p>Card Title: " . $result['title'] . "</p>";
@@ -89,4 +101,8 @@ function checkAllCards(): array {
     $result = $query->fetchAll();
     return $result;
 
+}
+
+function createMTGCard(array $result) {
+    echo 'Hi Mom !';
 }

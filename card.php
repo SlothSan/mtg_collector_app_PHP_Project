@@ -5,8 +5,6 @@ if(isset($_POST['return'])) {
     unset($_POST['return']);
     header('Location: index.php');
 }
-echo "Hello You Are On The Card Page !";
-print_r($_SESSION);
 ?>
 
 <html>
@@ -18,7 +16,9 @@ print_r($_SESSION);
 </head>
 <body>
     <div class="mtg-card-container">
-        <?php ?>
+        <h1>MTG Card Generator</h1>
+        <p>Takes the info from the DB and generates a card using PHP & CSS - Neat !</p>
+        <?php createMTGCard(checkSingleCardAndGetAllInfo($_SESSION['createCard'])); ?>
     </div>
     <form method="post">
         <button type='submit' value='return' name='return'>Go Back To Homepage</button>
