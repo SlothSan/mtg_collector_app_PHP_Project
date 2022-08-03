@@ -27,6 +27,32 @@ require_once('functions.php');
                 <p class="project-blurb-text">There is a DB that holds Magic The Gathering Cards. They are all displayed below.</p>
             </div>
         </section>
+        <section class="registration-section">
+            <div class="registration-container">
+                <form method="get">
+                    <label for="name">Card Title: </label>
+                    <input type="text" name="title" alt="input for card title" placeholder="Centaur Courser" >
+                    <label for="cardType">Card Type: </label>
+                    <input type="text" name="cardType" placeholder="Creature - Centaur Warrior>"
+                    <label for="color">Select The Card Color: </label>
+                    <select name="color">
+                        <option value="Green">Green</option>
+                        <option value="Blue">Blue</option>
+                        <option value="Black">Black</option>
+                        <option value="Red">Red</option>
+                        <option value="White">White</option>
+                    </select>
+                    <label for="raritySet">Select The Card Rarity: </label>
+                    <select name="raritySet">
+                        <option value="Common">Common</option>
+                        <option value="Uncommon">Uncommon</option>
+                        <option value="Rare">Rare</option>
+                        <option value="Mythic Rare">Mythic Rare</option>
+                    </select>
+                    <input type="submit" value="Submit Your Card!">
+                </form>
+            </div>
+        </section>
         <section class="cardDisplay-container">
             <?php  echo createAllDisplayCards(getAllCardsFromDb()); ?>
         </section>
