@@ -192,4 +192,36 @@ Lifelink (Damage dealt by this creature also causes you to gain that much life.)
         $expected = "<div class='card-back-white'><div class='card-top-container'><div class='card-title-container'><p>Sungrace Pegasus</p></div><div class='mana-cost-container'><div class='mana-cost-display-container'><div class='mana-neutral-container'><img class='mana-neutral' src='./imgs/manaCosts/mana_circle.png' alt='neutral mana'><p class='mana-neutral-cost'>1</p></div><img class='mana-cost-color' src='./imgs/manaCosts/mana_w.png' alt='white mana'></div></div></div><div class='card-art-container''><img class='card-art' src='./imgs/cardArt/sungracePegasus.jpeg' alt='Sungrace Pegasus' ></div><div class='card-type-container'><div class='card-type-title-container'><p class='card-type-text'>Creature - Pegasus</p></div><div class='card-type-setLogo-container'><img class='card-set-logo-image' src='./imgs/M15_setIcons/m15_setIcon_common.jpeg' alt='M15 common' ></div></div><div class='description-container'><span class='ability-cost-container'></span><div class='description-contents-container'><p>Flying (This creature can't be blocked except by creatures with flying or reach.) Lifelink (Damage dealt by this creature also causes you to gain that much life.)</p><p class='designer-text'>The sacred feathers of the pegasus are said to have healing powers.</p></div></div><div class='powerandtough-container'><p class='powerandtough'>3/3</p></div></div>";
         $this->assertEquals($expected, $result);
     }
+    public function testCreateMTGCard3()
+    {
+        $inputA = [
+            'color' => 'green',
+            'title' => 'Yisan, the Wanderer Bard',
+            'genericCost' => 2,
+            'greenCost' => 1,
+            'blackCost' => null,
+            'blueCost' => null,
+            'redCost' => null,
+            'whiteCost' => null,
+            'cardArt' => 'yisanTheWandererBard.jpeg',
+            'cardType' => 'Legendary Creature - Human Rogue',
+            'setType' => 'M15',
+            'raritySet' => 'rare',
+            'abilityCostGeneric' => 2,
+            'abilityCostGreen' => 1,
+            'abilityCostRed' => null,
+            'abilityCostBlue' => null,
+            'abilityCostBlack' => null,
+            'abilityCostWhite' => null,
+            'abilityTap' => 1,
+            'description' => "Put a verse counter on Yisan, the Wanderer Bard: Search your library for a creature card with mana value equal to the number of verse counters on Yisan, put it onto the battlefield, then shuffle.",
+            'designerFlavourText' => 'Designed by Brian Fargo',
+            'power' => 2,
+            'toughness' => 3
+        ];
+
+        $result = createMTGCard($inputA);
+        $expected = "<div class='card-back-green'><div class='card-top-container'><div class='card-title-container'><p>Yisan, the Wanderer Bard</p></div><div class='mana-cost-container'><div class='mana-cost-display-container'><div class='mana-neutral-container'><img class='mana-neutral' src='./imgs/manaCosts/mana_circle.png' alt='neutral mana'><p class='mana-neutral-cost'>2</p></div><img class='mana-cost-color' src='./imgs/manaCosts/mana_g.png' alt='green mana'></div></div></div><div class='card-art-container''><img class='card-art' src='./imgs/cardArt/yisanTheWandererBard.jpeg' alt='Yisan, the Wanderer Bard' ></div><div class='card-type-container'><div class='card-type-title-container'><p class='card-type-text'>Legendary Creature - Human Rogue</p></div><div class='card-type-setLogo-container'><img class='card-set-logo-image' src='./imgs/M15_setIcons/m15_setIcon_rare.jpeg' alt='M15 rare' ></div></div><div class='description-container'><span class='ability-cost-container'><img class='ability-cost ability-neutral' src='./imgs/manaCosts/mana_circle.png' alt='ability mana cost'><p class='ability-neutral-cost'>2</p><img class='ability-cost' src='./imgs/manaCosts/mana_g.png' alt='green ability mana cost'>, <img class='ability-cost' src='./imgs/manaCosts/mana_t.png' alt='tap-icon'>, </span><div class='description-contents-container'><p>Put a verse counter on Yisan, the Wanderer Bard: Search your library for a creature card with mana value equal to the number of verse counters on Yisan, put it onto the battlefield, then shuffle.</p><p class='designer-text'>Designed by Brian Fargo</p></div></div><div class='powerandtough-container'><p class='powerandtough'>2/3</p></div></div>";
+        $this->assertEquals($expected, $result);
+    }
 }
