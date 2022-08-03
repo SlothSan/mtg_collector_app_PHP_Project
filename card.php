@@ -7,7 +7,7 @@ if(isset($_POST['return'])) {
 }
 ?>
 
-<html>
+<html lang="en">
 <head>
     <title>MTG Card Display Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +20,7 @@ if(isset($_POST['return'])) {
             <h1 class="mtg-card-header-title">MTG Card Generator</h1>
             <p class="mtg-card-header-text">Takes the info from the DB and generates a card using PHP & CSS - Neat !</p>
         </div>
-        <?php createMTGCard(checkSingleCardAndGetAllInfo($_SESSION['createCard'])); ?>
+        <?php echo createMTGCard(checkSingleCardAndGetAllInfo($_SESSION['createCard'])); ?>
         <form method="post">
             <button class="return-button" type='submit' value='return' name='return'>Go Back To Homepage</button>
         </form>

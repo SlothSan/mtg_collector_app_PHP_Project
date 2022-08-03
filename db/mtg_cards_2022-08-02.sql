@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.38)
 # Database: mtg_cards
-# Generation Time: 2022-08-01 19:36:01 +0000
+# Generation Time: 2022-08-02 20:12:03 +0000
 # ************************************************************
 
 
@@ -62,7 +62,12 @@ VALUES
 	(2,'blue','Amphin Pathmage',3,NULL,NULL,1,NULL,NULL,'amphinPathmage.jpeg','Creature - Salamander Wizard','M15','common',2,NULL,NULL,1,NULL,NULL,0,':Target creature can\'t be blocked this turn.','\"There are those who do not believe in the existence of the amphin. This seems somehow to be of their own design.\" - Gor Muldrak, Cryptohistories',3,2),
 	(3,'black','Accursed Spirit',3,NULL,1,NULL,NULL,NULL,'accursedSpirit.jpeg','Creature - Spirit','M15','common',NULL,NULL,NULL,NULL,NULL,NULL,0,'Intimidate (This creature can\'t be blocked except by artifact creatures and/or creatures that share a color with it.)','Many have heard the slither of dragging armor and the soft squelch of its voice. But only its victims ever meet its icy gaze.',3,2),
 	(4,'red','Act on Impulse',2,NULL,NULL,NULL,1,NULL,'actOnImpulse.jpeg','Sorcery','M15','uncommon',NULL,NULL,NULL,NULL,NULL,NULL,0,'Exile the top three cards of your library. Until end of turn, you may play cards exiled this way. (If you cast a spell this way, you still pay its costs. You can play a land this way only if you have an available land play remaining.)','\"You don\'t want to know what happens after I put on the goggles.\"',NULL,NULL),
-	(5,'white','Battle Mastery',2,NULL,NULL,NULL,NULL,1,'battleMastery.jpeg','Enchantment - Aura\n','M15','uncommon',NULL,NULL,NULL,NULL,NULL,NULL,0,'Enchant creature - Enchanted creature has double strike. (It deals both first-strike and regular combat damage.)','\"Boom! Boom! Boots the size of oxcarts, then an axe like a falling sun. Elves scattered. Trees scattered. Even the hills ran for the hills!\" - Clachan Tales',NULL,NULL);
+	(5,'white','Battle Mastery',2,NULL,NULL,NULL,NULL,1,'battleMastery.jpeg','Enchantment - Aura\n','M15','uncommon',NULL,NULL,NULL,NULL,NULL,NULL,0,'Enchant creature - Enchanted creature has double strike. (It deals both first-strike and regular combat damage.)','\"Boom! Boom! Boots the size of oxcarts, then an axe like a falling sun. Elves scattered. Trees scattered. Even the hills ran for the hills!\" - Clachan Tales',NULL,NULL),
+	(6,'green','Yisan, the Wanderer Bard',2,1,NULL,NULL,NULL,NULL,'yisanTheWandererBard.jpeg','Legendary Creature - Human Rogue','M15','rare',2,1,NULL,NULL,NULL,NULL,1,'Put a verse counter on Yisan, the Wanderer Bard: Search your library for a creature card with mana value equal to the number of verse counters on Yisan, put it onto the battlefield, then shuffle.','Designed by Brian Fargo',2,3),
+	(7,'blue','Cancel',1,NULL,NULL,2,NULL,NULL,'cancelArt.jpeg','Instant','M15','common',NULL,NULL,NULL,NULL,NULL,NULL,0,'Counter target spell.','\"What you are attempting is not against the law. It is, however, extremely foolish.\"',NULL,NULL),
+	(8,'black','In Garruks Wake',7,NULL,2,NULL,NULL,NULL,'inGarruksWake.jpeg','Sorcery','M15','rare',NULL,NULL,NULL,NULL,NULL,NULL,0,'Destroy all creatures you don\'t control and all planeswalkers you don\'t control.','Beyond pain, beyond obsession and wild despair, there lies a place of twisted power only the most tormented souls can reach.',NULL,NULL),
+	(9,'red','Miners Bane',4,NULL,NULL,NULL,2,NULL,'minersBaneArt.jpeg','Creature - Elemental','M15','common',2,NULL,1,NULL,NULL,NULL,0,': Miner\'s Bane gets +1/+0 and gains trample until end of turn. (It can deal excess combat damage to the player or planeswalker it\'s attacking.)','There are certain stones even dwarves know to leave in the earth.',6,3),
+	(10,'white','Sungrace Pegasus',1,NULL,NULL,NULL,NULL,1,'sungracePegasus.jpeg','Creature - Pegasus','M15','common',NULL,NULL,NULL,NULL,NULL,NULL,0,'Flying (This creature can\'t be blocked except by creatures with flying or reach.)\nLifelink (Damage dealt by this creature also causes you to gain that much life.)','The sacred feathers of the pegasus are said to have healing powers.',1,2);
 
 /*!40000 ALTER TABLE `cards` ENABLE KEYS */;
 UNLOCK TABLES;
