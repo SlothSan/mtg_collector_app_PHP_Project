@@ -274,5 +274,28 @@ Lifelink (Damage dealt by this creature also causes you to gain that much life.)
         $this->assertEquals($expected, $result);
     }
 
+    public function testCreateMTGCardMalformed1()
+    {
+        $inputA = 'I am a string!';
+        $this->expectException(TypeError::class);
+        $result = createMTGCard($inputA);
+    }
 
+    public function testCreateMTGCardMalformed2()
+    {
+        $inputA = 1;
+        $this->expectException(TypeError::class);
+        $result = createMTGCard($inputA);
+    }
+
+    public function testCreateMTGCardFailure1()
+    {
+        $inputA = [
+            'NotAKey' => 'Not a Value',
+            'AlsoNotAKey' => 'Also Not a Value'
+        ];
+        $expected = '';
+        $result = createMTGCard($inputA);
+        $this->assertEquals($expected, $result);
+    }
 }

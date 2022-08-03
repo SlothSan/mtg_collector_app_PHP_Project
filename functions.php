@@ -72,6 +72,32 @@ function checkAllCards(): array {
 }
 
 function createMTGCard(array $result): string {
+    if (!array_key_exists('color', $result) ||
+        !array_key_exists('title', $result) ||
+        !array_key_exists('genericCost', $result) ||
+        !array_key_exists('greenCost', $result) ||
+        !array_key_exists('blackCost', $result) ||
+        !array_key_exists('blueCost', $result) ||
+        !array_key_exists('redCost', $result) ||
+        !array_key_exists('whiteCost', $result) ||
+        !array_key_exists('cardArt', $result) ||
+        !array_key_exists('cardType', $result) ||
+        !array_key_exists('setType', $result) ||
+        !array_key_exists('raritySet', $result) ||
+        !array_key_exists('abilityCostGeneric', $result) ||
+        !array_key_exists('abilityCostGreen', $result) ||
+        !array_key_exists('abilityCostRed', $result) ||
+        !array_key_exists('abilityCostBlue', $result) ||
+        !array_key_exists('abilityCostBlack', $result) ||
+        !array_key_exists('abilityCostWhite', $result) ||
+        !array_key_exists('abilityTap', $result) ||
+        !array_key_exists('description', $result) ||
+        !array_key_exists('designerFlavourText', $result) ||
+        !array_key_exists('power', $result) ||
+        !array_key_exists('toughness', $result)) {
+        return '';
+    }
+
     $color = $result['color'];
     $cardTitle = $result['title'];
     $genericManaCost = $result['genericCost'];
