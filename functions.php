@@ -62,7 +62,7 @@ function checkAllCards(): array {
     return $result = $query->fetchAll();
 }
 
-function createMTGCard(array $result) {
+function createMTGCard(array $result): string {
     $color = $result['color'];
     $cardTitle = $result['title'];
     $genericManaCost = $result['genericCost'];
@@ -73,104 +73,106 @@ function createMTGCard(array $result) {
     $flavorDesignerText = $result['designerFlavourText'];
     $power = $result['power'];
     $toughness = $result['toughness'];
-    echo "<div class='card-back-$color'>";
-    echo "<div class='card-top-container'>";
-    echo "<div class='card-title-container'>";
-    echo "<p>$cardTitle</p>";
-    echo "</div>";
-    echo "<div class='mana-cost-container'>";
-    echo "<div class='mana-cost-display-container'>";
-
+    $outputString = '';
+    $outputString .=  "<div class='card-back-$color'>";
+    $outputString .= "<div class='card-top-container'>";
+    $outputString .= "<div class='card-title-container'>";
+    $outputString .= "<p>$cardTitle</p>";
+    $outputString .=  "</div>";
+    $outputString .=  "<div class='mana-cost-container'>";
+    $outputString .=  "<div class='mana-cost-display-container'>";
         if($genericManaCost != null) {
-            echo "<div class='mana-neutral-container'>";
-                echo "<img class='mana-neutral' src='./imgs/manaCosts/mana_circle.png' alt='neutral mana'>";
-                echo "<p class='mana-neutral-cost'>$genericManaCost</p>";
-            echo "</div>";
+            $outputString .= "<div class='mana-neutral-container'>";
+            $outputString .= "<img class='mana-neutral' src='./imgs/manaCosts/mana_circle.png' alt='neutral mana'>";
+                $outputString .= "<p class='mana-neutral-cost'>$genericManaCost</p>";
+            $outputString .= "</div>";
         }
         if ($result['greenCost'] != null) {
             $counterGreen = $result['greenCost'];
             for ($counterGreen; $counterGreen > 0; $counterGreen--) {
-                echo '<img class="mana-cost-color" src="./imgs/manaCosts/mana_g.png" alt="green mana">';
+                $outputString .= '<img class="mana-cost-color" src="./imgs/manaCosts/mana_g.png" alt="green mana">';
             }
         }
         if ($result['blackCost'] != null) {
             $counterBlack = $result['blackCost'];
             for ($counterBlack; $counterBlack > 0; $counterBlack--) {
-                echo '<img class="mana-cost-color" src="./imgs/manaCosts/mana_b.png" alt="black mana">';
+                $outputString .= '<img class="mana-cost-color" src="./imgs/manaCosts/mana_b.png" alt="black mana">';
             }
         }
         if ($result['blueCost'] != null) {
             $counterBlue = $result['blueCost'];
             for ($counterBlue; $counterBlue > 0; $counterBlue--) {
-                echo '<img class="mana-cost-color" src="./imgs/manaCosts/mana_u.png" alt="blue mana">';
+                $outputString .= '<img class="mana-cost-color" src="./imgs/manaCosts/mana_u.png" alt="blue mana">';
             }
         }
         if ($result['redCost'] != null) {
             $counterRed = $result['redCost'];
             for ($counterRed; $counterRed > 0; $counterRed--) {
-                echo '<img class="mana-cost-color" src="./imgs/manaCosts/mana_r.png" alt="red mana">';
+                $outputString .= '<img class="mana-cost-color" src="./imgs/manaCosts/mana_r.png" alt="red mana">';
             }
         }
         if ($result['whiteCost'] != null) {
             $counterWhite = $result['whiteCost'];
             for ($counterWhite; $counterWhite > 0; $counterWhite--) {
-                echo '<img class="mana-cost-color" src="./imgs/manaCosts/mana_w.png" alt="white mana">';
+                $outputString .= '<img class="mana-cost-color" src="./imgs/manaCosts/mana_w.png" alt="white mana">';
             }
         }
-    echo "</div>"; // Close mana-cost
-    echo "</div>"; // Close Mana Container
-    echo "</div>"; // Close Card Top Div
-    echo "<div class='card-art-container''>";
-        echo "<img class='card-art' src='./imgs/cardArt/$cardArt' alt='$cardTitle' >";
-    echo "</div>"; //End of card art container
-    echo "<div class='card-type-container'>";
-        echo "<div class='card-type-title-container'>";
-            echo "<p class='card-type-text'>$cardType</p>";
-        echo "</div>";
-        echo "<div class='card-type-setLogo-container'>";
-            echo "<img class='card-set-logo-image' src='./imgs/M15_setIcons/m15_setIcon_$setType.jpeg' alt='M15 $setType' >";
-        echo "</div>";
-    echo "</div>"; // End of card type container
-    echo "<div class='description-container'>";
-        echo "<span class='ability-cost-container'>";
+    $outputString .= "</div>"; // Close mana-cost
+    $outputString .=  "</div>"; // Close Mana Container
+    $outputString .=  "</div>"; // Close Card Top Div
+    $outputString .= "<div class='card-art-container''>";
+        $outputString .= "<img class='card-art' src='./imgs/cardArt/$cardArt' alt='$cardTitle' >";
+    $outputString .= "</div>"; //End of card art container
+    $outputString .=  "<div class='card-type-container'>";
+        $outputString .= "<div class='card-type-title-container'>";
+            $outputString .=  "<p class='card-type-text'>$cardType</p>";
+        $outputString .=  "</div>";
+        $outputString .=  "<div class='card-type-setLogo-container'>";
+            $outputString .=  "<img class='card-set-logo-image' src='./imgs/M15_setIcons/m15_setIcon_$setType.jpeg' alt='M15 $setType' >";
+        $outputString .=  "</div>";
+    $outputString .=  "</div>"; // End of card type container
+    $outputString .=  "<div class='description-container'>";
+        $outputString .=  "<span class='ability-cost-container'>";
         if($result['abilityCostGeneric'] != null) { //Logic goes here for ability costs / tap
-            echo "<img class='ability-cost ability-neutral' src='./imgs/manaCosts/mana_circle.png' alt='ability mana cost'>";
-            echo "<p class='ability-neutral-cost'>" . $result['abilityCostGeneric'] . "</p>";
+            $outputString .=  "<img class='ability-cost ability-neutral' src='./imgs/manaCosts/mana_circle.png' alt='ability mana cost'>";
+            $outputString .=  "<p class='ability-neutral-cost'>" . $result['abilityCostGeneric'] . "</p>";
         }
         if ($result['abilityCostGreen'] != null) {
-            echo "<img class='ability-cost' src='./imgs/manaCosts/mana_g.png' alt='green ability mana cost'>";
+            $outputString .= "<img class='ability-cost' src='./imgs/manaCosts/mana_g.png' alt='green ability mana cost'>";
         }
         if ($result['abilityCostRed'] != null) {
-            echo "<img class='ability-cost' src='./imgs/manaCosts/mana_r.png' alt='red ability mana cost'>";
+            $outputString .=  "<img class='ability-cost' src='./imgs/manaCosts/mana_r.png' alt='red ability mana cost'>";
         }
         if ($result['abilityCostBlue'] != null) {
-            echo "<img class='ability-cost' src='./imgs/manaCosts/mana_u.png' alt='blue ability mana cost'>";
+            $outputString .=  "<img class='ability-cost' src='./imgs/manaCosts/mana_u.png' alt='blue ability mana cost'>";
         }
         if ($result['abilityCostBlack'] != null) {
-            echo "<img class='ability-cost' src='./imgs/manaCosts/mana_b.png.' alt='black ability mana cost'>";
+            $outputString .=  "<img class='ability-cost' src='./imgs/manaCosts/mana_b.png.' alt='black ability mana cost'>";
         }
         if ($result['abilityCostWhite'] != null) {
-            echo "<img class='ability-cost' src='./imgs/manaCosts/mana_w.png' alt='white ability mana cost'>";
+            $outputString .=  "<img class='ability-cost' src='./imgs/manaCosts/mana_w.png' alt='white ability mana cost'>";
         }
         if ($result['abilityTap']) {
-            echo ", ";
-            echo "<img class='ability-cost' src='./imgs/manaCosts/mana_t.png' alt='tap-icon'>";
-            echo  ", ";
+            $outputString .=  ", ";
+            $outputString .= "<img class='ability-cost' src='./imgs/manaCosts/mana_t.png' alt='tap-icon'>";
+            $outputString .=   ", ";
         }
-        echo "</span>";
-        echo "<div class='description-contents-container'>";
+        $outputString .=  "</span>";
+        $outputString .=  "<div class='description-contents-container'>";
         if ($result['description'] != null) {
-            echo "<p>$description</p>";
+            $outputString .=  "<p>$description</p>";
         }
         if($result['designerFlavourText'] != null) {
-            echo "<p class='designer-text'>$flavorDesignerText</p>";
+            $outputString .=  "<p class='designer-text'>$flavorDesignerText</p>";
         }
-        echo "</div>";
-    echo "</div>"; // End of description container.
-        echo "<div class='powerandtough-container'>";
+        $outputString .= "</div>";
+    $outputString .=  "</div>"; // End of description container.
+        $outputString .=  "<div class='powerandtough-container'>";
         if($result['power'] and $result['toughness'] != null) {
-            echo "<p class='powerandtough'>$power/$toughness</p>";
+            $outputString .=  "<p class='powerandtough'>$power/$toughness</p>";
         }
-    echo "</div>"; // end of power and tough
-    echo "</div>";
+    $outputString .= "</div>"; // end of power and tough
+    $outputString .=  "</div>";
+
+    return $outputString;
 }
