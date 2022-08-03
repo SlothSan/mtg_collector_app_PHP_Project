@@ -13,37 +13,41 @@ function checkSingleCardAndGetAllInfo(string $cardTitle): array {
     return $result = $query->fetch();
 }
 
-function createAllDisplayCards(array $results) {
+function createAllDisplayCards(array $results): string {
+    $outputString = '';
     foreach ($results as $card) {
-        echo "<div class='display-card'>";
-            echo "<p>Card Title: ". $card['title'] . "</p>";
-            echo "<p>Card Type: " . $card['cardType'] . "</p>";
+        $returnString = '';
+        $returnString .=  "<div class='display-card'>";
+        $returnString .= "<p>Card Title: ". $card['title'] . "</p>";
+        $returnString .= "<p>Card Type: " . $card['cardType'] . "</p>";
             if($card['color'] === 'green') {
-                echo "<p>Card Color: Green</p>";
+                $returnString .= "<p>Card Color: Green</p>";
             } else if ($card['color'] === 'black') {
-                echo "<p>Card Color: Black</p>";
+                $returnString .= "<p>Card Color: Black</p>";
             } else if ($card['color'] === 'red') {
-                echo "<p>Card Color: Red</p>";
+                $returnString .= "<p>Card Color: Red</p>";
             } else if ($card['color'] === 'blue') {
-                echo "<p>Card Color: Blue</p>";
+                $returnString .= "<p>Card Color: Blue</p>";
             } else if ($card['color'] === 'white') {
-                echo "<p>Card Color: White</p>";
+                $returnString .= "<p>Card Color: White</p>";
             }
 
             if ($card['raritySet'] === 'common') {
-                echo "<p>Rarity: Common</p>";
+                $returnString .= "<p>Rarity: Common</p>";
             } else if ($card['raritySet'] === 'uncommon') {
-                echo "<p>Rarity: Uncommon</p>";
+                $returnString .= "<p>Rarity: Uncommon</p>";
             } else if ($card['raritySet'] === 'rare') {
-                echo "<p>Rarity: Rare</p>";
+                $returnString .=  "<p>Rarity: Rare</p>";
             } else if ($card['raritySet'] === "mythicRare") {
-                echo "<p>Rarity: Mythic Rare</p>";
+                $returnString .=  "<p>Rarity: Mythic Rare</p>";
             }
-            echo "<form method='post'>";
-                echo "<button class='view-card-button' type='submit' value='". $card['title'] . "' name='createCard'>View Card</button>";
-            echo "</form>";
-        echo "</div>";
+            $returnString .= "<form method='post'>";
+                $returnString .= "<button class='view-card-button' type='submit' value='". $card['title'] . "' name='createCard'>View Card</button>";
+            $returnString .= "</form>";
+        $returnString .= "</div>";
+        $outputString .=  $returnString;
     }
+ return $outputString;
 }
 
 function checkAllCards(): array {

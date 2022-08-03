@@ -32,7 +32,7 @@ if(isset($_POST['createCard'])) {
             </div>
         </section>
         <section class="cardDisplay-container">
-            <?php createAllDisplayCards(checkAllCards()); ?>
+            <?php  echo createAllDisplayCards(checkAllCards()); ?>
         </section>
     </body>
 </html>
