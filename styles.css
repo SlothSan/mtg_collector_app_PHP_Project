@@ -201,6 +201,10 @@ header {
     padding: 15px 15px;
 }
 
+.create-card-textarea {
+    resize: vertical;
+}
+
 
 
 
