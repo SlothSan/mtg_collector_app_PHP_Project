@@ -12,17 +12,30 @@ function addCardToDb(array $card) {
     $blueCost = checkIfNull($card['blueCost']);
     $redCost = checkIfNull($card['redCost']);
     $whiteCost = checkIfNull($card['whiteCost']);
+    $abilityCostGeneric = checkIfNull($card['abilityCostGeneric']);
+    $abilityCostGreen = checkIfNull($card['abilityCostGreen']);
+    $abilityCostBlack = checkIfNull($card['abilityCostBlack']);
+    $abilityCostBlue = checkIfNull($card['abilityCostBlue']);
+    $abilityCostRed = checkIfNull($card['abilityCostRed']);
+    $abilityCostWhite = checkIfNull($card['abilityCostWhite']);
+    $abilityTap = $card['abilityTap'];
 
     $connectionString = 'mysql:host=db; dbname=mtg_cards';
     $dbUsername = 'root';
     $dbPassword = 'password';
     $db = new PDO($connectionString, $dbUsername, $dbPassword);
     $queryString = 'INSERT INTO  `cards` (`title`, `cardType`, `color`, `raritySet`, `genericCost`, `greenCost`, `blackCost`, `blueCost`, 
-                      `redCost`, `whiteCost`)
-	VALUES (:title, :cardType, :color, :raritySet, :genericCost, :greenCost, :blackCost, :blueCost, :redCost, :whiteCost)';
+                      `redCost`, `whiteCost`, `abilityCostGeneric`, `abilityCostGreen`, `abilityCostBlack`, `abilityCostBlue`, `abilityCostRed`, 
+                      `abilityCostWhite`, `abilityTap`)
+	VALUES (:title, :cardType, :color, :raritySet, :genericCost, :greenCost, :blackCost, :blueCost, :redCost, :whiteCost,
+	         :abilityCostGeneric, :abilityCostGreen, :abilityCostBlack, :abilityCostBlue, :abilityCostRed, :abilityCostWhite, 
+	        :abilityTap)';
     $query = $db->prepare($queryString);
     $query->execute(['title' => $title, 'cardType' => $cardType, 'color' => $color, 'raritySet' => $raritySet, 'genericCost' => $genericCost,
-    'greenCost' => $greenCost, 'blackCost' => $blackCost, 'blueCost' => $blueCost, 'redCost' => $redCost, 'whiteCost' => $whiteCost]);
+    'greenCost' => $greenCost, 'blackCost' => $blackCost, 'blueCost' => $blueCost, 'redCost' => $redCost, 'whiteCost' => $whiteCost,
+        'abilityCostGeneric' => $abilityCostGeneric, 'abilityCostGreen' => $abilityCostGreen, 'abilityCostBlack' => $abilityCostBlack,
+        'abilityCostBlue' => $abilityCostBlue, 'abilityCostRed' => $abilityCostRed, 'abilityCostWhite' => $abilityCostWhite, 'abilityTap' => $abilityTap,
+        ]);
 
 }
 

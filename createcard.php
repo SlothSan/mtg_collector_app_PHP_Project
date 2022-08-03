@@ -108,6 +108,78 @@ session_start();
                 <option value="6">6</option>
                 <option value="7">7</option>
             </select>
+            <p class="create-card-text">Ability Costs are the costs to use ability's you create on the card, see the explainer at the top!</p>
+            <label for="abilityCostGeneric">Ability Generic Mana Cost: </label>
+            <select name="abilityCostGeneric">
+                <option value="null" selected="selected">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+            </select>
+            <label for="abilityCostGreen">Ability Green Mana Cost: </label>
+            <select name="abilityCostGreen">
+                <option value="null" selected="selected">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+            </select>
+            <label for="abilityCostBlack">Ability Black Mana Cost: </label>
+            <select name="abilityCostBlack">
+                <option value="null" selected="selected">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+            </select>
+            <label for="abilityCostBlue">Ability Blue Mana Cost: </label>
+            <select name="abilityCostBlue">
+                <option value="null" selected="selected">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+            </select>
+            <label for="abilityCostRed">Ability Red Mana Cost: </label>
+            <select name="abilityCostRed">
+                <option value="null" selected="selected">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+            </select>
+            <label for="abilityCostWhite">Ability White Mana Cost: </label>
+            <select name="abilityCostWhite">
+                <option value="null" selected="selected">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+            </select>
+            <label for="abilityTap">Does the Ability Require the Card to be tapped: </label>
+            <select name="abilityTap">
+                <option value="0" selected="selected">No Tap</option>
+                <option value="1">Tap to use ability</option>
+            </select>
             <input type="submit" value="Submit Your Card!">
         </form>
     </div>

@@ -143,8 +143,8 @@ header {
 
 .create-card-body {
     width: 100%;
-    height: auto;
-    background-image: url("");
+    height: fit-content;
+    background-color: darkslategray;
 }
 
 .create-card-section {
@@ -158,7 +158,6 @@ header {
     justify-content: center;
     align-items: center;
     background-color: darkslategray;
-    height: 100vh;
     color: white;
 }
 
@@ -170,6 +169,11 @@ header {
     justify-content: center;
     align-items: center;
     border-bottom: 1px solid white;
+}
+
+.create-card-text {
+    margin: 15px 0px 10px 0px;
+    border-top:  1px solid white;
 }
 
 .create-card-link {
