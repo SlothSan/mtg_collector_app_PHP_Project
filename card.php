@@ -18,7 +18,7 @@ if(isset($_POST['return'])) {
     <div class="mtg-card-container">
         <div class="mtg-card-header">
             <h1 class="mtg-card-header-title">MTG Card Generator</h1>
-            <p class="mtg-card-header-text">Takes the info from the DB and generates a card using PHP & CSS - Neat !</p>
+            <p class="mtg-card-header-text">Takes the info from the DB and generates a card using PHP & CSS</p>
         </div>
         <?php echo createMTGCard(checkSingleCardAndGetAllInfo($_SESSION['createCard'])); ?>
         <form method="post">
