@@ -83,6 +83,36 @@ header {
     color: white;
 }
 
+.registration-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 100%;
+    background-color: darkslategray;
+    border-bottom: white 3px solid;
+    color: white;
+}
+
+.registration-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.registration-container a {
+    text-decoration: none;
+    margin-top: 10px;
+    color: white;
+    padding: 30px 30px;
+    background-color: #4d0013;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+
 .cardDisplay-container {
     width: 100%;
     height: auto;
