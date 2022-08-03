@@ -12,10 +12,14 @@ session_start();
     <link href="styles.css" type="text/css" rel="stylesheet">
     <title>MTG Card Collector - Create Card!.</title>
 </head>
-<body class="createcard-body">
-<section class="createcard-section">
-    <div class="createcard-container">
-        <form method="get" action="registrationpage.php">
+<body class="create-card-body">
+<section class="create-card-section">
+    <div class="create-card-container">
+        <div class="create-card-explainer">
+            <h2>Create a Card!</h2>
+            <p>Fill in the form below and submit it using the button at the bottom to add your Card to the collection!</p>
+        </div>
+        <form class="create-card-form" method="get" action="registrationpage.php">
             <label for="name">Card Title: </label>
             <input type="text" name="title" alt="input for card title" placeholder="Centaur Courser" required>
             <label for="cardType">Card Type: </label>
