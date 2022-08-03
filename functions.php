@@ -6,19 +6,52 @@ function addCardToDb(array $card) {
     $cardType = $card['cardType'];
     $color = $card['color'];
     $raritySet = $card['raritySet'];
+    //This disgusting If else block is to set the datatype to null if the value is 0 on the form
+    //Will work on a better solution but this works.
+    if ($card['genericCost'] === 'null') {
+        $genericCost = null;
+    } else {
+        $genericCost = intval($card['genericCost']);
+    }
+    if ($card['greenCost'] === 'null') {
+        $greenCost = null;
+    } else {
+        $greenCost = intval($card['greenCost']);
+    }
+    if ($card['blackCost'] === 'null') {
+        $blackCost = null;
+    } else {
+        $blackCost = intval($card['blackCost']);
+    }
+    if ($card['blueCost'] === 'null') {
+        $blueCost = null;
+    } else {
+        $blueCost = intval($card['blueCost']);
+    }
+    if ($card['redCost'] === 'null') {
+        $redCost = null;
+    } else {
+        $redCost = intval($card['redCost']);
+    }
+    if ($card['whiteCost'] === 'null') {
+        $whiteCost = null;
+    } else {
+        $whiteCost = intval($card['whiteCost']);
+    }
+
 
     $connectionString = 'mysql:host=db; dbname=mtg_cards';
     $dbUsername = 'root';
     $dbPassword = 'password';
     $db = new PDO($connectionString, $dbUsername, $dbPassword);
-    $queryString = 'INSERT INTO  `cards` (`title`, `cardType`, `color`, `raritySet`)
-	VALUES (?, ?, ?, ?)';
+    $queryString = 'INSERT INTO  `cards` (`title`, `cardType`, `color`, `raritySet`, `genericCost`, `greenCost`, `blackCost`, `blueCost`, 
+                      `redCost`, `whiteCost`)
+	VALUES (:title, :cardType, :color, :raritySet, :genericCost, :greenCost, :blackCost, :blueCost, :redCost, :whiteCost)';
     $query = $db->prepare($queryString);
-    $query->execute([$title, $cardType, $color, $raritySet]);
+    $query->execute(['title' => $title, 'cardType' => $cardType, 'color' => $color, 'raritySet' => $raritySet, 'genericCost' => $genericCost,
+    'greenCost' => $greenCost, 'blackCost' => $blackCost, 'blueCost' => $blueCost, 'redCost' => $redCost, 'whiteCost' => $whiteCost]);
 
 }
-
-
 
 
 function createAllDisplayCards(array $results): string {
