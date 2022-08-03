@@ -55,9 +55,7 @@ function checkAllCards(): array {
     $queryString = 'SELECT * FROM `cards`';
     $query = $db->prepare($queryString);
     $query->execute();
-    $result = $query->fetchAll();
-    return $result;
-
+    return $result = $query->fetchAll();
 }
 
 function createMTGCard(array $result) {
@@ -166,7 +164,7 @@ function createMTGCard(array $result) {
         echo "</div>";
     echo "</div>"; // End of description container.
         echo "<div class='powerandtough-container'>";
-        if($result['power'] or $result['toughness'] != null) {
+        if($result['power'] and $result['toughness'] != null) {
             echo "<p class='powerandtough'>$power/$toughness</p>";
         }
     echo "</div>"; // end of power and tough

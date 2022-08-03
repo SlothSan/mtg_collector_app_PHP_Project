@@ -25,7 +25,7 @@
 
 body {
     font-size: 16px;
-    font-family: 'Beleren Small Caps', 'Arial';
+    font-family: 'Beleren Small Caps','sans-serif';
 }
 
 header {
@@ -36,7 +36,7 @@ header {
     justify-content: center;
     background-color: grey;
     color: white;
-    border-bottom: white 1px solid;
+    border-bottom: black 3px solid;
 }
 
 .header-container {
@@ -64,7 +64,7 @@ header {
     height: 150px;
     width: 100%;
     background-color: grey;
-    border-bottom: white 1px solid;
+    border-bottom: black 3px solid;
 }
 
 .project-blurb-container {
@@ -161,7 +161,7 @@ header {
     flex-direction: column;
     position: static;
     background-image: url("./imgs/cardBacks/greenCardBack.png");
-    background-color: black;
+    background-color: white;
     height: 698px;
     width: 500px;
     margin-bottom: 10px;
@@ -172,7 +172,7 @@ header {
     flex-direction: column;
     position: static;
     background-image: url("./imgs/cardBacks/blueCardBack.png");
-    background-color: black;
+    background-color: white;
     height: 698px;
     width: 500px;
     margin-bottom: 10px;
@@ -183,7 +183,7 @@ header {
     flex-direction: column;
     position: static;
     background-image: url("./imgs/cardBacks/redCardBack.png");
-    background-color: black;
+    background-color: white;
     height: 698px;
     width: 500px;
     margin-bottom: 10px;
@@ -194,7 +194,7 @@ header {
     flex-direction: column;
     position: static;
     background-image: url("./imgs/cardBacks/blackCardBack.png");
-    background-color: black;
+    background-color: white;
     height: 698px;
     width: 500px;
     margin-bottom: 10px;
@@ -205,7 +205,7 @@ header {
     flex-direction: column;
     position: static;
     background-image: url("./imgs/cardBacks/whiteCardBack.png");
-    background-color: black;
+    background-color: white;
     height: 698px;
     width: 500px;
     margin-bottom: 10px;
