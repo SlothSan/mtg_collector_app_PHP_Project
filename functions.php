@@ -11,6 +11,10 @@ function addCardToDb(array $card) {
     $dbUsername = 'root';
     $dbPassword = 'password';
     $db = new PDO($connectionString, $dbUsername, $dbPassword);
+    $queryString = 'INSERT INTO  `cards` (`title`, `cardType`, `color`, `raritySet`)
+	VALUES (?, ?, ?, ?)';
+    $query = $db->prepare($queryString);
+    $query->execute([$title, $cardType, $color, $raritySet]);
 
 }
 

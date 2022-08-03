@@ -29,28 +29,8 @@ require_once('functions.php');
         </section>
         <section class="registration-section">
             <div class="registration-container">
-                <form method="get" action="registrationpage.php">
-                    <label for="name">Card Title: </label>
-                    <input type="text" name="title" alt="input for card title" placeholder="Centaur Courser" required>
-                    <label for="cardType">Card Type: </label>
-                    <input type="text" name="cardType" placeholder="Creature - Centaur Warrior" required>
-                    <label for="color">Select The Card Color: </label>
-                    <select name="color" required>
-                        <option value="Green">Green</option>
-                        <option value="Blue">Blue</option>
-                        <option value="Black">Black</option>
-                        <option value="Red">Red</option>
-                        <option value="White">White</option>
-                    </select>
-                    <label for="raritySet">Select The Card Rarity: </label>
-                    <select name="raritySet" required>
-                        <option value="Common">Common</option>
-                        <option value="Uncommon">Uncommon</option>
-                        <option value="Rare">Rare</option>
-                        <option value="Mythic Rare">Mythic Rare</option>
-                    </select>
-                    <input type="submit" value="Submit Your Card!">
-                </form>
+                <p>Click the link below to be taken to a page to add a card to the collection !</p>
+                <a href="createcard.php">Create a Card !</a>
             </div>
         </section>
         <section class="cardDisplay-container">
