@@ -28,7 +28,7 @@ require_once('functions.php');
             </div>
         </section>
         <section class="cardDisplay-container">
-            <?php  echo createAllDisplayCards(checkAllCards()); ?>
+            <?php  echo createAllDisplayCards(getAllCardsFromDb()); ?>
         </section>
     </body>
 </html>
