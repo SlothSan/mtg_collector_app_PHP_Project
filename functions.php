@@ -1,5 +1,22 @@
 <?php
 
+function addCardToDb(array $card) {
+    //Placeholder setup for hardening the Db add against SQL Injection.
+    $title = $card['title'];
+    $cardType = $card['cardType'];
+    $color = $card['color'];
+    $raritySet = $card['raritySet'];
+
+    $connectionString = 'mysql:host=db; dbname=mtg_cards';
+    $dbUsername = 'root';
+    $dbPassword = 'password';
+    $db = new PDO($connectionString, $dbUsername, $dbPassword);
+
+}
+
+
+
+
 function createAllDisplayCards(array $results): string {
     $outputString = '';
 

@@ -29,13 +29,13 @@ require_once('functions.php');
         </section>
         <section class="registration-section">
             <div class="registration-container">
-                <form method="get">
+                <form method="get" action="registrationpage.php">
                     <label for="name">Card Title: </label>
-                    <input type="text" name="title" alt="input for card title" placeholder="Centaur Courser" >
+                    <input type="text" name="title" alt="input for card title" placeholder="Centaur Courser" required>
                     <label for="cardType">Card Type: </label>
-                    <input type="text" name="cardType" placeholder="Creature - Centaur Warrior>"
+                    <input type="text" name="cardType" placeholder="Creature - Centaur Warrior" required>
                     <label for="color">Select The Card Color: </label>
-                    <select name="color">
+                    <select name="color" required>
                         <option value="Green">Green</option>
                         <option value="Blue">Blue</option>
                         <option value="Black">Black</option>
@@ -43,7 +43,7 @@ require_once('functions.php');
                         <option value="White">White</option>
                     </select>
                     <label for="raritySet">Select The Card Rarity: </label>
-                    <select name="raritySet">
+                    <select name="raritySet" required>
                         <option value="Common">Common</option>
                         <option value="Uncommon">Uncommon</option>
                         <option value="Rare">Rare</option>
