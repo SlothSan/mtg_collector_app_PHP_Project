@@ -17,13 +17,13 @@ class testFunctions extends TestCase
     {
         $inputA = [
             [
-                'color' => 'green',
+                'color' => 'Green',
                 'title' => 'Centaur Courser',
                 'cardType' => 'Creature - Centaur Warrior',
-                'raritySet' => 'common'
+                'raritySet' => 'Common'
             ]
         ];
-        $expected = "<div class='display-card'><p>Card Title: Centaur Courser</p><p>Card Type: Creature - Centaur Warrior</p><p>Card Color: Green</p><p>Rarity: Common</p><form method='post'><button class='view-card-button' type='submit' value='Centaur Courser' name='createCard'>View Card</button></form></div>";
+        $expected = "<div class='display-card'><p>Card Title: Centaur Courser</p><p>Card Type: Creature - Centaur Warrior</p><p>Card Color: Green</p><p>Rarity: Common</p></div>";
         $result = createAllDisplayCards($inputA);
         $this->assertEquals($expected, $result);
     }
@@ -38,7 +38,7 @@ class testFunctions extends TestCase
                 'raritySet' => 'common'
             ]
         ];
-        $expected = "<div class='display-card'><p>Card Title: Amphin Pathmage</p><p>Card Type: Creature - Salamander Wizard</p><p>Card Color: Blue</p><p>Rarity: Common</p><form method='post'><button class='view-card-button' type='submit' value='Amphin Pathmage' name='createCard'>View Card</button></form></div>";
+        $expected = "<div class='display-card'><p>Card Title: Amphin Pathmage</p><p>Card Type: Creature - Salamander Wizard</p><p>Card Color: blue</p><p>Rarity: common</p></div>";
         $result = createAllDisplayCards($inputA);
         $this->assertEquals($expected, $result);
     }
@@ -48,13 +48,13 @@ class testFunctions extends TestCase
     {
         $inputA = [
             [
-                'color' => 'white',
+                'color' => 'White',
                 'title' => 'Sungrace Pegasus',
                 'cardType' => 'Creature - Pegasus',
-                'raritySet' => 'common'
+                'raritySet' => 'Common'
             ]
         ];
-        $expected = "<div class='display-card'><p>Card Title: Sungrace Pegasus</p><p>Card Type: Creature - Pegasus</p><p>Card Color: White</p><p>Rarity: Common</p><form method='post'><button class='view-card-button' type='submit' value='Sungrace Pegasus' name='createCard'>View Card</button></form></div>";
+        $expected = "<div class='display-card'><p>Card Title: Sungrace Pegasus</p><p>Card Type: Creature - Pegasus</p><p>Card Color: White</p><p>Rarity: Common</p></div>";
         $result = createAllDisplayCards($inputA);
         $this->assertEquals($expected, $result);
     }
@@ -84,13 +84,13 @@ class testFunctions extends TestCase
     {
         $inputA = [
             [
-                'color' => 'white',
+                'color' => 'White',
                 'title' => 'Sungrace Pegasus',
                 'cardType' => 'Creature - Pegasus',
-                'raritySet' => 'notaSetRarity'
+                'rarity' => 'notaSetRarity'
             ]
         ];
-        $expected = "<div class='display-card'><p>Card Title: Sungrace Pegasus</p><p>Card Type: Creature - Pegasus</p><p>Card Color: White</p><form method='post'><button class='view-card-button' type='submit' value='Sungrace Pegasus' name='createCard'>View Card</button></form></div>";
+        $expected = "<div class='display-card'><p>Card Title: Sungrace Pegasus</p><p>Card Type: Creature - Pegasus</p><p>Card Color: White</p></div>";
         $result = createAllDisplayCards($inputA);
         $this->assertEquals($expected, $result);
     }
