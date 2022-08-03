@@ -30,13 +30,13 @@ body {
 
 header {
     width: 100%;
-    height: 150px;
+    height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: grey;
+    background-color: darkslategray;
     color: white;
-    border-bottom: black 3px solid;
+    border-bottom: white 3px solid;
 }
 
 .header-container {
@@ -48,12 +48,15 @@ header {
 
 .header-title {
     margin: 0 auto;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+    padding: 20px 20px;
 }
 
 .header-intro-text {
     margin: 0 auto;
+    font-size: 1.2rem;
     font-style: italic;
+    padding: 0 20px;
 }
 
 .project-blurb-section {
@@ -61,10 +64,10 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 150px;
+    height: 200px;
     width: 100%;
-    background-color: grey;
-    border-bottom: black 3px solid;
+    background-color: darkslategray;
+    border-bottom: white 3px solid;
 }
 
 .project-blurb-container {
@@ -75,6 +78,7 @@ header {
 }
 
 .project-blurb-text {
+    padding: 10px 20px;
     margin-top: 5px;
     color: white;
 }
@@ -100,37 +104,49 @@ header {
     gap: 5px;
     margin-top: 10px;
     width: 400px;
-    background-color: grey;
+    background-color: darkslategray;
     color: white;
     border-radius: 10px;
-    border: black solid 1px;
+    border: white solid 2px;
+    padding: 25px;
 }
 
 .view-card-button {
-    background-color: black;
+    background-color: #4d0013;
     color: white;
-    width: 100px;
-    height: 25px;
+    width: 120px;
+    height: 60px;
     border-radius: 5px;
     margin-bottom: 10px;
+    border: white 2px solid;
+}
+
+.cardpage-body {
+    width: 100%;
+    height: 100%;
 }
 
 .mtg-card-container {
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: url("./imgs/backgrounds/background1.jpeg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 .mtg-card-header {
     height: 175px;
-    width: 500px;
+    width: 460px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: gray;
+    background-color: darkslategray;
     color: white;
     border-radius: 10px;
     margin-bottom: 10px;
@@ -146,12 +162,13 @@ header {
 }
 
 .return-button {
-    background-color: grey;
+    background-color: #4d0013;
     color: white;
     width: 300px;
-    height: 25px;
+    height: 50px;
     border-radius: 5px;
     margin-bottom: 10px;
+    border: solid 2px white;
 }
 
 /*MTG Card Generator Styling*/
@@ -216,14 +233,14 @@ header {
     flex-direction: row;
     justify-content: left;
     align-items: center;
-    width: 100%;
+    width: 500px;
     font-size: 1.2rem;
     margin-top: 9%;
     margin-left: 10%;
 }
 
 .card-title-container {
-    width: 60%;
+    width: 300px;
 }
 
 .card-title {
@@ -236,7 +253,7 @@ header {
 .mana-cost-container {
     display: flex;
     justify-content: flex-end;
-    width: 50%;
+    width: 200px;
     margin-right: 19%;
     flex-direction: row;
     gap: 5px;

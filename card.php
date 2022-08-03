@@ -14,7 +14,7 @@ if(isset($_POST['return'])) {
     <link href="normalize.css" type="text/css" rel="stylesheet">
     <link href="styles.css" type="text/css" rel="stylesheet">
 </head>
-<body>
+<body class="cardpage-body">
     <div class="mtg-card-container">
         <div class="mtg-card-header">
             <h1 class="mtg-card-header-title">MTG Card Generator</h1>
