@@ -15,7 +15,16 @@ function checkSingleCardAndGetAllInfo(string $cardTitle): array {
 
 function createAllDisplayCards(array $results): string {
     $outputString = '';
+
+
     foreach ($results as $card) {
+        if (!is_array($card) ||
+            !array_key_exists('title', $card) ||
+            !array_key_exists('cardType', $card) ||
+            !array_key_exists('color', $card) ||
+            !array_key_exists('raritySet', $card)) {
+            return '';
+        }
         $returnString = '';
         $returnString .=  "<div class='display-card'>";
         $returnString .= "<p>Card Title: ". $card['title'] . "</p>";

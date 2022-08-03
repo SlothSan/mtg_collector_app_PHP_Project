@@ -4,7 +4,7 @@ use PHPUnit\Framework\TestCase;
 class testFunctions extends TestCase
 {
 
-    public function testCreateAllDisplayCardSucess1()
+    public function testCreateAllDisplayCardSuccess1()
     {
         $inputA = [['color' => 'MTG Card', 'title' => 'Centaur Courser', 'cardType' => 'Creature - Centaur Warrior', 'raritySet' => 'common']];
 
@@ -28,7 +28,7 @@ class testFunctions extends TestCase
         $this->assertEquals($expected, $result);
     }
 
-    public function testCreateAllDisplayCardsSucess3()
+    public function testCreateAllDisplayCardsSuccess3()
     {
         $inputA = [
             [
@@ -123,6 +123,22 @@ class testFunctions extends TestCase
             ]
         ];
         $expected = "<div class='display-card'><p>Card Title: Sungrace Pegasus</p><p>Card Type: Creature - Pegasus</p><p>Card Color: White</p><p>Rarity: Common</p><form method='post'><button class='view-card-button' type='submit' value='Sungrace Pegasus' name='createCard'>View Card</button></form></div>";
+        $result = createAllDisplayCards($inputA);
+        $this->assertEquals($expected, $result);
+    }
+
+    public function testCreateAllDisplayCardsFailure4()
+    {
+        $inputA = [
+            [
+                'notAColor' => 'white',
+                'title' => 'Sungrace Pegasus',
+                'cardType' => 'Creature - Pegasus',
+                'raritySet' => 'common',
+                'alsoNotAnExpectedKey' => 'theSpanishInquisition'
+            ]
+        ];
+        $expected = '';
         $result = createAllDisplayCards($inputA);
         $this->assertEquals($expected, $result);
     }
@@ -257,4 +273,6 @@ Lifelink (Damage dealt by this creature also causes you to gain that much life.)
         $expected = "<div class='card-back-white'><div class='card-top-container'><div class='card-title-container'><p>Battle Mastery</p></div><div class='mana-cost-container'><div class='mana-cost-display-container'><div class='mana-neutral-container'><img class='mana-neutral' src='./imgs/manaCosts/mana_circle.png' alt='neutral mana'><p class='mana-neutral-cost'>2</p></div><img class='mana-cost-color' src='./imgs/manaCosts/mana_w.png' alt='white mana'></div></div></div><div class='card-art-container''><img class='card-art' src='./imgs/cardArt/battleMastery.jpeg' alt='Battle Mastery' ></div><div class='card-type-container'><div class='card-type-title-container'><p class='card-type-text'>Enchantment - Aura</p></div><div class='card-type-setLogo-container'><img class='card-set-logo-image' src='./imgs/M15_setIcons/m15_setIcon_uncommon.jpeg' alt='M15 uncommon' ></div></div><div class='description-container'><span class='ability-cost-container'></span><div class='description-contents-container'><p>Enchant creature - Enchanted creature has double strike. (It deals both first-strike and regular combat damage.)</p><p class='designer-text'>". '"Boom! Boom! Boots the size of oxcarts, then an axe like a falling sun. Elves scattered. Trees scattered. Even the hills ran for the hills!" - Clachan Tales</p></div></div><div class=' . "'powerandtough-container'></div></div>";
         $this->assertEquals($expected, $result);
     }
+
+
 }
