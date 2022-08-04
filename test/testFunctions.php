@@ -143,4 +143,20 @@ class testFunctions extends TestCase
         $this->assertEquals($expected, $result);
     }
 
+    public function testCheckIfNullSuccess1()
+    {
+        $inputA = 'null';
+        $expected = null;
+        $result = checkIfNull($inputA);
+        $this->assertEquals($expected, $result);
+    }
+
+    public function testCheckIfNullSuccess2()
+    {
+        $inputA = "123";
+        $expected = 123;
+        $result = checkIfNull($inputA);
+        $this->assertEquals($expected, $result);
+    }
+
 }
