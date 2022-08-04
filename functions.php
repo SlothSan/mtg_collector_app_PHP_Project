@@ -21,6 +21,8 @@ function addCardToDb(array $card) {
     $abilityTap = $card['abilityTap'];
     $description = $card['description'];
     $designerFlavourText = $card['designerFlavourText'];
+    $power = checkIfNull($card['power']);
+    $toughness = checkIfNull($card['toughness']);
 
     $connectionString = 'mysql:host=db; dbname=mtg_cards';
     $dbUsername = 'root';
@@ -28,16 +30,16 @@ function addCardToDb(array $card) {
     $db = new PDO($connectionString, $dbUsername, $dbPassword);
     $queryString = 'INSERT INTO  `cards` (`title`, `cardType`, `color`, `raritySet`, `genericCost`, `greenCost`, `blackCost`, `blueCost`, 
                       `redCost`, `whiteCost`, `abilityCostGeneric`, `abilityCostGreen`, `abilityCostBlack`, `abilityCostBlue`, `abilityCostRed`, 
-                      `abilityCostWhite`, `abilityTap`, `description`, `designerFlavourText`)
+                      `abilityCostWhite`, `abilityTap`, `description`, `designerFlavourText`, `power`, `toughness`)
 	VALUES (:title, :cardType, :color, :raritySet, :genericCost, :greenCost, :blackCost, :blueCost, :redCost, :whiteCost,
 	         :abilityCostGeneric, :abilityCostGreen, :abilityCostBlack, :abilityCostBlue, :abilityCostRed, :abilityCostWhite, 
-	        :abilityTap, :description, :designerFlavourText)';
+	        :abilityTap, :description, :designerFlavourText, :power, :toughness)';
     $query = $db->prepare($queryString);
     $query->execute(['title' => $title, 'cardType' => $cardType, 'color' => $color, 'raritySet' => $raritySet, 'genericCost' => $genericCost,
     'greenCost' => $greenCost, 'blackCost' => $blackCost, 'blueCost' => $blueCost, 'redCost' => $redCost, 'whiteCost' => $whiteCost,
         'abilityCostGeneric' => $abilityCostGeneric, 'abilityCostGreen' => $abilityCostGreen, 'abilityCostBlack' => $abilityCostBlack,
         'abilityCostBlue' => $abilityCostBlue, 'abilityCostRed' => $abilityCostRed, 'abilityCostWhite' => $abilityCostWhite, 'abilityTap' => $abilityTap,
-        'description' => $description, 'designerFlavourText' => $designerFlavourText]);
+        'description' => $description, 'designerFlavourText' => $designerFlavourText, 'power' => $power, 'toughness' => $toughness]);
 
 }
 
