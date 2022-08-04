@@ -27,6 +27,12 @@ require_once('functions.php');
                 <p class="project-blurb-text">There is a DB that holds Magic The Gathering Cards. They are all displayed below.</p>
             </div>
         </section>
+        <section class="registration-section">
+            <div class="registration-container">
+                <p>Click the link below to be taken to a page to add a card to the collection !</p>
+                <a href="createcard.php">Create a Card !</a>
+            </div>
+        </section>
         <section class="cardDisplay-container">
             <?php  echo createAllDisplayCards(getAllCardsFromDb()); ?>
         </section>

@@ -34,9 +34,9 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: darkslategray;
-    color: white;
-    border-bottom: white 3px solid;
+    background-color: #2f4f4f;
+    color: #FFFFFF;
+    border-bottom: #FFFFFF 3px solid;
 }
 
 .header-container {
@@ -66,8 +66,8 @@ header {
     align-items: center;
     height: 200px;
     width: 100%;
-    background-color: darkslategray;
-    border-bottom: white 3px solid;
+    background-color: #2f4f4f;
+    border-bottom: #FFFFFF 3px solid;
 }
 
 .project-blurb-container {
@@ -80,8 +80,38 @@ header {
 .project-blurb-text {
     padding: 10px 20px;
     margin-top: 5px;
-    color: white;
+    color: #FFFFFF;
 }
+
+.registration-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 100%;
+    background-color: #2f4f4f;
+    border-bottom: #FFFFFF 3px solid;
+    color: #FFFFFF;
+}
+
+.registration-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.registration-container a {
+    text-decoration: none;
+    margin-top: 10px;
+    color: #FFFFFF;
+    padding: 30px 30px;
+    background-color: #4d0013;
+    border: 1px solid #FFFFFF;
+    border-radius: 10px;
+}
+
 
 .cardDisplay-container {
     width: 100%;
@@ -104,21 +134,92 @@ header {
     gap: 5px;
     margin-top: 10px;
     width: 400px;
-    background-color: darkslategray;
-    color: white;
+    background-color: #2f4f4f;
+    color: #FFFFFF;
     border-radius: 10px;
-    border: white solid 2px;
+    border: #FFFFFF solid 2px;
     padding: 25px;
 }
 
+.create-card-body {
+    width: 100%;
+    height: fit-content;
+    background-color: #2f4f4f;
+}
+
+.create-card-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.create-card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #2f4f4f;
+    color: #FFFFFF;
+}
+
+.create-card-explainer {
+    width: 400px;
+    height: 125px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #FFFFFF;
+}
+
+.create-card-text {
+    margin: 15px 0 10px 0;
+    border-top:  1px solid #FFFFFF;
+}
+
+.create-card-link {
+    margin: 20px 0 20px 0;
+    text-decoration: underline;
+    color: white;
+}
+
+.create-card-form {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.create-card-form label{
+    margin-top: 10px;
+}
+
+.create-card-form input:last-of-type {
+    margin-top: 10px;
+    width: 400px;
+    background-color: #4d0013;
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    padding: 15px 15px;
+}
+
+.create-card-textarea {
+    resize: vertical;
+}
+
+
+
+
+
+/*MTG Card Generator Styling - everything below this line is now redundant post it being nuked by Rayna, leaving it in if by some miracle
+I make it too Story 3 in less than 24 hours - nice.jpeg */
+
 .view-card-button {
     background-color: #4d0013;
-    color: white;
+    color: #FFFFFF;
     width: 120px;
     height: 60px;
     border-radius: 5px;
     margin-bottom: 10px;
-    border: white 2px solid;
+    border: #FFFFFF 2px solid;
 }
 
 .cardpage-body {
@@ -147,8 +248,8 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: darkslategray;
-    color: white;
+    background-color: #2f4f4f;
+    color: #FFFFFF;
     border-radius: 10px;
     margin-bottom: 10px;
 }
@@ -164,22 +265,20 @@ header {
 
 .return-button {
     background-color: #4d0013;
-    color: white;
+    color: #FFFFFF;
     width: 300px;
     height: 50px;
     border-radius: 5px;
     margin-bottom: 10px;
-    border: solid 2px white;
+    border: solid 2px #FFFFFF;
 }
-
-/*MTG Card Generator Styling*/
 
 .card-back-green {
     display: flex;
     flex-direction: column;
     position: static;
     background-image: url("./imgs/cardBacks/greenCardBack.png");
-    background-color: white;
+    background-color: #FFFFFF;
     height: 698px;
     width: 500px;
     margin-bottom: 10px;
@@ -190,7 +289,7 @@ header {
     flex-direction: column;
     position: static;
     background-image: url("./imgs/cardBacks/blueCardBack.png");
-    background-color: white;
+    background-color: #FFFFFF;
     height: 698px;
     width: 500px;
     margin-bottom: 10px;
@@ -201,7 +300,7 @@ header {
     flex-direction: column;
     position: static;
     background-image: url("./imgs/cardBacks/redCardBack.png");
-    background-color: white;
+    background-color: #FFFFFF;
     height: 698px;
     width: 500px;
     margin-bottom: 10px;
@@ -212,7 +311,7 @@ header {
     flex-direction: column;
     position: static;
     background-image: url("./imgs/cardBacks/blackCardBack.png");
-    background-color: white;
+    background-color: #FFFFFF;
     height: 698px;
     width: 500px;
     margin-bottom: 10px;
@@ -223,7 +322,7 @@ header {
     flex-direction: column;
     position: static;
     background-image: url("./imgs/cardBacks/whiteCardBack.png");
-    background-color: white;
+    background-color: #FFFFFF;
     height: 698px;
     width: 500px;
     margin-bottom: 10px;
