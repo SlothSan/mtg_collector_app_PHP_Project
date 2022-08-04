@@ -186,6 +186,20 @@ session_start();
             <label for="designerFlavourText">Enter your cards flavour text: </label>
             <textarea class="create-card-textarea" rows="6" name="designerFlavourText" placeholder="EG: Many have heard the slither of dragging armor and the soft squelch of its voice. But only its victims ever meet its icy gaze."></textarea>
             <p class="create-card-text">Below are fields for the power and toughness of your card (if you have created a spell please leave these on 0</p>
+            <label for="power">Power: </label>
+            <select name="power">
+                <option value="null" selected="selected">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option><option value="5">5</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
             <input type="submit" value="Submit Your Card!">
         </form>
     </div>
