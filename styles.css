@@ -273,7 +273,7 @@ I make it too Story 3 in less than 24 hours - nice.jpeg */
     border: solid 2px #FFFFFF;
 }
 
-.card-back-green {
+.card-back-Green {
     display: flex;
     flex-direction: column;
     position: static;
@@ -284,7 +284,7 @@ I make it too Story 3 in less than 24 hours - nice.jpeg */
     margin-bottom: 10px;
 }
 
-.card-back-blue {
+.card-back-Blue {
     display: flex;
     flex-direction: column;
     position: static;
@@ -295,7 +295,7 @@ I make it too Story 3 in less than 24 hours - nice.jpeg */
     margin-bottom: 10px;
 }
 
-.card-back-red {
+.card-back-Red {
     display: flex;
     flex-direction: column;
     position: static;
@@ -306,7 +306,7 @@ I make it too Story 3 in less than 24 hours - nice.jpeg */
     margin-bottom: 10px;
 }
 
-.card-back-black {
+.card-back-Black {
     display: flex;
     flex-direction: column;
     position: static;
@@ -317,7 +317,7 @@ I make it too Story 3 in less than 24 hours - nice.jpeg */
     margin-bottom: 10px;
 }
 
-.card-back-white {
+.card-back-White {
     display: flex;
     flex-direction: column;
     position: static;
@@ -390,7 +390,7 @@ I make it too Story 3 in less than 24 hours - nice.jpeg */
 
 .card-art-container {
     position: static;
-    width: 407px;
+    width: 410px;
     height: 308px;
     margin-left: 9.3%;
     z-index: 5;

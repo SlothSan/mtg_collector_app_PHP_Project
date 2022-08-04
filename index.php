@@ -1,6 +1,10 @@
 <?php
 session_start();
 require_once('functions.php');
+if(isset($_POST['createCard'])) {
+    $_SESSION['createCard'] = $_POST['createCard'];
+    header('Location: card.php');
+}
 ?>
 
 
