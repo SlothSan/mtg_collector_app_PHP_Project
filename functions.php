@@ -1,6 +1,7 @@
 <?php
 
-function addCardToDb(array $card) {
+function addCardToDb(array $card)
+{
     //Placeholder setup for hardening the Db add against SQL Injection.
     $title = $card['title'];
     $cardType = $card['cardType'];
@@ -43,7 +44,8 @@ function addCardToDb(array $card) {
 
 }
 
-function checkIfNull($toBeChecked) {
+function checkIfNull($toBeChecked)
+{
     if ($toBeChecked === 'null') {
         return null;
     } else {
@@ -52,7 +54,8 @@ function checkIfNull($toBeChecked) {
 }
 
 
-function createAllDisplayCards(array $results): string {
+function createAllDisplayCards(array $results): string
+{
     $outputString = '';
 
     foreach ($results as $card) {
@@ -71,10 +74,11 @@ function createAllDisplayCards(array $results): string {
         $cardString .= "</div>";
         $outputString .=  $cardString;
     }
- return $outputString;
+    return $outputString;
 }
 
-function getAllCardsFromDb(): array {
+function getAllCardsFromDb(): array
+{
     $connectionString = 'mysql:host=db; dbname=mtg_cards';
     $dbUsername = 'root';
     $dbPassword = 'password';
