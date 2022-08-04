@@ -23,9 +23,9 @@ session_start();
             </a>
         </div>
         <form class="create-card-form" method="get" action="registrationpage.php">
-            <label for="name">Card Title: </label>
+            <label for="title" id="title">Card Title: </label>
             <input type="text" name="title" alt="input for card title" placeholder="Centaur Courser" required>
-            <label for="cardType">Card Type: </label>
+            <label for="cardType" id-="cardType">Card Type: </label>
             <input type="text" name="cardType" placeholder="Creature - Centaur Warrior" required>
             <label for="color">Select The Card Color: </label>
             <select name="color" required>
@@ -181,9 +181,9 @@ session_start();
                 <option value="1">Tap to use ability</option>
             </select>
             <p class="create-card-text">Below are the text areas for adding your card's description (start with the abilitys) and flavour text in the other text area</p>
-            <label for="description">Enter your cards abilitys and description: </label>
+            <label for="description" id="description">Enter your cards abilitys and description: </label>
             <textarea class="create-card-textarea" rows="6" name="description" placeholder="EG: Many have heard the slither of dragging armor and the soft squelch of its voice. But only its victims ever meet its icy gaze."></textarea>
-            <label for="designerFlavourText">Enter your cards flavour text: </label>
+            <label for="designerFlavourText" id="designerFlavourText">Enter your cards flavour text: </label>
             <textarea class="create-card-textarea" rows="6" name="designerFlavourText" placeholder="EG: Many have heard the slither of dragging armor and the soft squelch of its voice. But only its victims ever meet its icy gaze."></textarea>
             <p class="create-card-text">Below are fields for the power and toughness of your card (if you have created a spell please leave these on 0</p>
             <label for="power">Power: </label>
