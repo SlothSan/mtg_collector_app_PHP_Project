@@ -22,7 +22,7 @@ function createAllDisplayCards(array $results): string
         $cardString .= "</div>";
         $outputString .=  $cardString;
     }
-        return $outputString;
+    return $outputString;
 }
 
 function getAllCardsFromDb(): array
