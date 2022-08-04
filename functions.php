@@ -80,7 +80,8 @@ function getAllCardsFromDb(): array {
     $dbPassword = 'password';
     $db = new PDO($connectionString, $dbUsername, $dbPassword);
     $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-    $queryString = 'SELECT * FROM `cards`';
+    $queryString = 'SELECT `id`, `title`, `cardType`, `color`, `raritySet` FROM `cards`
+                    ORDER BY `id` DESC';
     $query = $db->prepare($queryString);
     $query->execute();
     return $query->fetchAll();
