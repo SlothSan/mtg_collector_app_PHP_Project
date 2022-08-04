@@ -19,6 +19,8 @@ function addCardToDb(array $card) {
     $abilityCostRed = checkIfNull($card['abilityCostRed']);
     $abilityCostWhite = checkIfNull($card['abilityCostWhite']);
     $abilityTap = $card['abilityTap'];
+    $description = $card['description'];
+    $designerFlavourText = $card['designerFlavourText'];
 
     $connectionString = 'mysql:host=db; dbname=mtg_cards';
     $dbUsername = 'root';
@@ -26,16 +28,16 @@ function addCardToDb(array $card) {
     $db = new PDO($connectionString, $dbUsername, $dbPassword);
     $queryString = 'INSERT INTO  `cards` (`title`, `cardType`, `color`, `raritySet`, `genericCost`, `greenCost`, `blackCost`, `blueCost`, 
                       `redCost`, `whiteCost`, `abilityCostGeneric`, `abilityCostGreen`, `abilityCostBlack`, `abilityCostBlue`, `abilityCostRed`, 
-                      `abilityCostWhite`, `abilityTap`)
+                      `abilityCostWhite`, `abilityTap`, `description`, `designerFlavourText`)
 	VALUES (:title, :cardType, :color, :raritySet, :genericCost, :greenCost, :blackCost, :blueCost, :redCost, :whiteCost,
 	         :abilityCostGeneric, :abilityCostGreen, :abilityCostBlack, :abilityCostBlue, :abilityCostRed, :abilityCostWhite, 
-	        :abilityTap)';
+	        :abilityTap, :description, :designerFlavourText)';
     $query = $db->prepare($queryString);
     $query->execute(['title' => $title, 'cardType' => $cardType, 'color' => $color, 'raritySet' => $raritySet, 'genericCost' => $genericCost,
     'greenCost' => $greenCost, 'blackCost' => $blackCost, 'blueCost' => $blueCost, 'redCost' => $redCost, 'whiteCost' => $whiteCost,
         'abilityCostGeneric' => $abilityCostGeneric, 'abilityCostGreen' => $abilityCostGreen, 'abilityCostBlack' => $abilityCostBlack,
         'abilityCostBlue' => $abilityCostBlue, 'abilityCostRed' => $abilityCostRed, 'abilityCostWhite' => $abilityCostWhite, 'abilityTap' => $abilityTap,
-        ]);
+        'description' => $description, 'designerFlavourText' => $designerFlavourText]);
 
 }
 
