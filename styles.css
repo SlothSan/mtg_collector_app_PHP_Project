@@ -34,9 +34,9 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: darkslategray;
-    color: white;
-    border-bottom: white 3px solid;
+    background-color: #2f4f4f;
+    color: #FFFFFF;
+    border-bottom: #FFFFFF 3px solid;
 }
 
 .header-container {
@@ -66,8 +66,8 @@ header {
     align-items: center;
     height: 200px;
     width: 100%;
-    background-color: darkslategray;
-    border-bottom: white 3px solid;
+    background-color: #2f4f4f;
+    border-bottom: #FFFFFF 3px solid;
 }
 
 .project-blurb-container {
@@ -80,7 +80,7 @@ header {
 .project-blurb-text {
     padding: 10px 20px;
     margin-top: 5px;
-    color: white;
+    color: #FFFFFF;
 }
 
 .registration-section {
@@ -90,9 +90,9 @@ header {
     align-items: center;
     height: 200px;
     width: 100%;
-    background-color: darkslategray;
-    border-bottom: white 3px solid;
-    color: white;
+    background-color: #2f4f4f;
+    border-bottom: #FFFFFF 3px solid;
+    color: #FFFFFF;
 }
 
 .registration-container {
@@ -105,10 +105,10 @@ header {
 .registration-container a {
     text-decoration: none;
     margin-top: 10px;
-    color: white;
+    color: #FFFFFF;
     padding: 30px 30px;
     background-color: #4d0013;
-    border: 1px solid white;
+    border: 1px solid #FFFFFF;
     border-radius: 10px;
 }
 
@@ -134,17 +134,17 @@ header {
     gap: 5px;
     margin-top: 10px;
     width: 400px;
-    background-color: darkslategray;
-    color: white;
+    background-color: #2f4f4f;
+    color: #FFFFFF;
     border-radius: 10px;
-    border: white solid 2px;
+    border: #FFFFFF solid 2px;
     padding: 25px;
 }
 
 .create-card-body {
     width: 100%;
     height: fit-content;
-    background-color: darkslategray;
+    background-color: #2f4f4f;
 }
 
 .create-card-section {
@@ -157,8 +157,8 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: darkslategray;
-    color: white;
+    background-color: #2f4f4f;
+    color: #FFFFFF;
 }
 
 .create-card-explainer {
@@ -168,16 +168,16 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #FFFFFF;
 }
 
 .create-card-text {
-    margin: 15px 0px 10px 0px;
-    border-top:  1px solid white;
+    margin: 15px 0 10px 0;
+    border-top:  1px solid #FFFFFF;
 }
 
 .create-card-link {
-    margin: 20px 0px 20px 0px;
+    margin: 20px 0 20px 0;
     text-decoration: underline;
     color: white;
 }
@@ -196,8 +196,8 @@ header {
     margin-top: 10px;
     width: 400px;
     background-color: #4d0013;
-    color: white;
-    border: 1px solid white;
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
     padding: 15px 15px;
 }
 
@@ -214,12 +214,12 @@ I make it too Story 3 in less than 24 hours - nice.jpeg */
 
 .view-card-button {
     background-color: #4d0013;
-    color: white;
+    color: #FFFFFF;
     width: 120px;
     height: 60px;
     border-radius: 5px;
     margin-bottom: 10px;
-    border: white 2px solid;
+    border: #FFFFFF 2px solid;
 }
 
 .cardpage-body {
@@ -248,8 +248,8 @@ I make it too Story 3 in less than 24 hours - nice.jpeg */
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: darkslategray;
-    color: white;
+    background-color: #2f4f4f;
+    color: #FFFFFF;
     border-radius: 10px;
     margin-bottom: 10px;
 }
@@ -265,12 +265,12 @@ I make it too Story 3 in less than 24 hours - nice.jpeg */
 
 .return-button {
     background-color: #4d0013;
-    color: white;
+    color: #FFFFFF;
     width: 300px;
     height: 50px;
     border-radius: 5px;
     margin-bottom: 10px;
-    border: solid 2px white;
+    border: solid 2px #FFFFFF;
 }
 
 .card-back-green {
@@ -278,7 +278,7 @@ I make it too Story 3 in less than 24 hours - nice.jpeg */
     flex-direction: column;
     position: static;
     background-image: url("./imgs/cardBacks/greenCardBack.png");
-    background-color: white;
+    background-color: #FFFFFF;
     height: 698px;
     width: 500px;
     margin-bottom: 10px;
@@ -289,7 +289,7 @@ I make it too Story 3 in less than 24 hours - nice.jpeg */
     flex-direction: column;
     position: static;
     background-image: url("./imgs/cardBacks/blueCardBack.png");
-    background-color: white;
+    background-color: #FFFFFF;
     height: 698px;
     width: 500px;
     margin-bottom: 10px;
@@ -300,7 +300,7 @@ I make it too Story 3 in less than 24 hours - nice.jpeg */
     flex-direction: column;
     position: static;
     background-image: url("./imgs/cardBacks/redCardBack.png");
-    background-color: white;
+    background-color: #FFFFFF;
     height: 698px;
     width: 500px;
     margin-bottom: 10px;
@@ -311,7 +311,7 @@ I make it too Story 3 in less than 24 hours - nice.jpeg */
     flex-direction: column;
     position: static;
     background-image: url("./imgs/cardBacks/blackCardBack.png");
-    background-color: white;
+    background-color: #FFFFFF;
     height: 698px;
     width: 500px;
     margin-bottom: 10px;
@@ -322,7 +322,7 @@ I make it too Story 3 in less than 24 hours - nice.jpeg */
     flex-direction: column;
     position: static;
     background-image: url("./imgs/cardBacks/whiteCardBack.png");
-    background-color: white;
+    background-color: #FFFFFF;
     height: 698px;
     width: 500px;
     margin-bottom: 10px;

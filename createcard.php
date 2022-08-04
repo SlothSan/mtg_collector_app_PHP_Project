@@ -10,7 +10,7 @@ session_start();
     <meta name="description" content="Mike Oram's PHP Collectors App">
     <link href="normalize.css" type="text/css" rel="stylesheet">
     <link href="styles.css" type="text/css" rel="stylesheet">
-    <title>MTG Card Collector - Create Card!.</title>
+    <title>MTG Card Collector - Create Card!</title>
 </head>
 <body class="create-card-body">
 <section class="create-card-section">
