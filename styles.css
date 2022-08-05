@@ -272,7 +272,7 @@ I make it too Story 3 in less than 24 hours - nice.jpeg */
     border: solid 2px #FFFFFF;
 }
 
-.card-back-green {
+.card-back-Green {
     display: flex;
     flex-direction: column;
     position: static;
@@ -283,7 +283,7 @@ I make it too Story 3 in less than 24 hours - nice.jpeg */
     margin-bottom: 10px;
 }
 
-.card-back-blue {
+.card-back-Blue {
     display: flex;
     flex-direction: column;
     position: static;
@@ -294,7 +294,7 @@ I make it too Story 3 in less than 24 hours - nice.jpeg */
     margin-bottom: 10px;
 }
 
-.card-back-red {
+.card-back-Red {
     display: flex;
     flex-direction: column;
     position: static;
@@ -305,7 +305,7 @@ I make it too Story 3 in less than 24 hours - nice.jpeg */
     margin-bottom: 10px;
 }
 
-.card-back-black {
+.card-back-Black {
     display: flex;
     flex-direction: column;
     position: static;
@@ -316,7 +316,7 @@ I make it too Story 3 in less than 24 hours - nice.jpeg */
     margin-bottom: 10px;
 }
 
-.card-back-white {
+.card-back-White {
     display: flex;
     flex-direction: column;
     position: static;
@@ -389,20 +389,20 @@ I make it too Story 3 in less than 24 hours - nice.jpeg */
 
 .card-art-container {
     position: static;
-    width: 407px;
-    height: 308px;
-    margin-left: 9.3%;
+    width: 414px;
+    height: 307px;
+    margin-left: 8.5%;
     z-index: 5;
-    margin-top: 1.8%;
+    margin-top: 2.4%;
 }
 
 .card-art {
-    width: 407px;
-    height: 308px;
+    width: 414px;
+    height: 307px;
 }
 
 .card-type-container {
-    margin-top: 2.3%;
+    margin-top: 1.9%;
     margin-left: 10%;
     display: flex;
     flex-direction: row;
