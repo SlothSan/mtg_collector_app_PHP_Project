@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once('functions.php');
+require_once('./functions.php');
 if(isset($_POST['createCard'])) {
     $_SESSION['createCard'] = $_POST['createCard'];
     header('Location: card.php');
@@ -14,8 +14,8 @@ if(isset($_POST['createCard'])) {
         <meta name="keywords" content="'Mike Oram', PHP, CSS, Magic The Gathering">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Mike Oram's PHP Collectors App">
-        <link href="normalize.css" type="text/css" rel="stylesheet">
-        <link href="styles.css" type="text/css" rel="stylesheet">
+        <link href="./normalize.css" type="text/css" rel="stylesheet">
+        <link href="./styles.css" type="text/css" rel="stylesheet">
         <title>MTG Card Collector - PHP Project - iO Academy.</title>
     </head>
     <body>
