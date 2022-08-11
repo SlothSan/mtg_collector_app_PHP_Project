@@ -27,7 +27,7 @@ function addCardToDb(array $card)
 
     $connectionString = 'mysql:host=db; dbname=mtg_cards';
     $dbUsername = 'root';
-    $dbPassword = 'password';
+    $dbPassword = '4qUSDQpcGu6H';
     $db = new PDO($connectionString, $dbUsername, $dbPassword);
     $queryString = 'INSERT INTO  `cards` (`title`, `cardType`, `color`, `raritySet`, `genericCost`, `greenCost`, `blackCost`, `blueCost`, 
                       `redCost`, `whiteCost`, `abilityCostGeneric`, `abilityCostGreen`, `abilityCostBlack`, `abilityCostBlue`, `abilityCostRed`, 
@@ -100,7 +100,7 @@ function checkSingleCardAndGetAllInfo(string $cardTitle): array
     $cardName = $cardTitle;
     $connectionString = 'mysql:host=db; dbname=mtg_cards';
     $dbUsername = 'root';
-    $dbPassword = 'password';
+    $dbPassword = '4qUSDQpcGu6H';
     $db = new PDO($connectionString, $dbUsername, $dbPassword);
     $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
     $queryString = "SELECT `color`, `title`, `genericCost`, `greenCost`, `blackCost`, `blueCost`, `redCost`, `whiteCost`,
