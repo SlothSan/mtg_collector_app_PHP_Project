@@ -11,3 +11,5 @@ You can create cards using the create card button, it has some required fields, 
 There is a link to a explainer for MTG cards on the create card page you can use as a reference.
 
 Enjoy & make some cool cards!
+
+I would like to rewrite this using OOP, MVC and a Framework now I have learned how to use them on the Full Stack Track @iO Academy. 
